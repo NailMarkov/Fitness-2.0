@@ -21,16 +21,31 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container"></div>
+    <header class="page-header container">
+      <nav class="page-header__nav nav">
+        <a class="nav__link" href="index.html">
+          <img src="img/svg/logo.svg" alt="Логотип сайта Фитнес." width="120" height="23">
+        </a>
+        <a class="nav__link" href="tel:888005555555">8-800-555-55-55</a>
+      </nav>
     </header>
-    <main>
+    <main class="main-page">
+      <section class="hero">
+        <h1 class="hero__title"></h1>
+      </section>
     </main>
     <footer>
-      <div class="container"></div>
+      <div class="container">Подвал</div>
     </footer>
   </div>
 
+  <script>
+    window.pixelperfect = {
+      breakpoints: [320, 768, 1366],
+      folder: 'img/pixelperfect'
+    };
+  </script>
+  <script src="https://efiand.github.io/pixelperfect-tool/pixelperfect.min.js"></script>
   <script src="js/vendor.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
