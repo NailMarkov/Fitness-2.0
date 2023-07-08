@@ -1,0 +1,12 @@
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 41px calc(50% - 580px) 32px;
+  background-color: $color-black-russian;
+  color: $color-default-white;
+}
+
+.page-footer__link {
+  display: block;
+}
