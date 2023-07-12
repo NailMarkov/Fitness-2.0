@@ -1,3 +1,12 @@
 .page-header {
+  padding: 30px $p-desktop 25px;
   z-index: 1;
+
+  @include vp-1199 {
+    padding: 40px $p-tablet 25px;
+  }
+
+  @include vp-767 {
+    padding: 20px $p-mobile 15px;
+  }
 }

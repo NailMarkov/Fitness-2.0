@@ -43,8 +43,9 @@
 
   <body>
     <div class="wrapper">
-      <header class="page-header container">
-        <nav class="page-header__nav nav">
+      <!-- Header -->
+      <header class="page-header">
+        <nav class="nav">
           <a class="nav__link" href="index.html">
             <img
               src="img/svg/logo.svg"
@@ -56,11 +57,112 @@
           <a class="nav__link" href="tel:888005555555">8-800-555-55-55</a>
         </nav>
       </header>
+
+      <!-- Main -->
       <main class="main-page">
+        <!-- Section Hero -->
         <section class="hero">
-          <h1 class="hero__title"></h1>
+          <p class="hero__text">
+            Тренажёрный зал Групповые занятия Кардио-зона
+          </p>
+          <div class="hero__block">
+            <h2 class="subtitle subtitle--hero">Омск</h2>
+            <h1 class="hero__title">Фитнес центр</h1>
+            <button class="btn btn--hero" type="button">
+              Купить абонемент
+            </button>
+          </div>
+          <div class="hero__image">
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 1199px)"
+                srcset="img/promo-tablet.webp, img/promo-tablet@2x.webp 2x"
+              />
+              <source
+                type="image/webp"
+                srcset="img/promo-desktop.webp, img/promo-desktop@2x.webp 2x"
+              />
+              <source
+                media="(max-width: 1199px)"
+                srcset="img/promo-tablet.jpg 1x, img/promo-tablet@2x.jpg 2x"
+              />
+              <img
+                src="img/promo-desktop.jpg"
+                alt=""
+                srcset="img/promo-desktop@2x.jpg 2x"
+                width="500"
+                height="556"
+              />
+            </picture>
+          </div>
         </section>
+
+        <!-- Section Gym -->
+        <section class="gym">
+          <div class="gym__block">
+            <h2 class="subtitle subtitle--gym">Тренажерный зал</h2>
+            <p class="gym__text">Просторный зал площадью 900 кв/м</p>
+            <p class="gym__description">
+              Supergym – самый большой фитнес центр за Уралом и идеальное место
+              для укрепления тела и здоровья. Тренажерный зал оснащен всем
+              необходимым современным оборудованием для всех спортсменов.
+            </p>
+            <p class="gym__description">
+              В зале расположены отдельная зона для Crossfit и кардио-зона с 40
+              тренажерами. Также в фитнес центре есть несколько оборудованных
+              залов для различных видов групповых занятий.
+            </p>
+          </div>
+          <div class="gym__image">
+            <picture>
+              <source
+                type="image/webp"
+                media="(max-width: 767px)"
+                srcset="img/gym-mobile.webp, img/gym-mobile@2x.webp 2x"
+              />
+              <source
+                type="image/webp"
+                media="(max-width: 1199px)"
+                srcset="img/gym-tablet.webp, img/gym-tablet@2x.webp 2x"
+              />
+              <source
+                type="image/webp"
+                srcset="img/gym-desktop.webp, img/gym-desktop@2x.webp 2x"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="img/gym-mobile.jpg 1x, img/gym-mobile@2x.jpg 2x"
+              />
+              <source
+                media="(max-width: 1199px)"
+                srcset="img/gym-tablet.jpg 1x, img/gym-tablet@2x.jpg 2x"
+              />
+              <img
+                src="img/gym-desktop.jpg"
+                alt=""
+                srcset="img/gym-desktop@2x.jpg 2x"
+                width="678"
+                height="401"
+              />
+            </picture>
+          </div>
+          <div class="gym__video" data-video>
+            <div class="video__player" id="9TZXsZItgdw" data-youtube></div>
+
+            <a
+              class="video__control"
+              href="https://youtube.com/embed/9TZXsZItgdw"
+              data-control
+            >
+              <span class="visually-hidden">Проиграть видео.</span>
+            </a>
+          </div>
+        </section>
+
       </main>
+
+      <!-- Footer -->
       <footer class="page-footer">
         <a class="page-footer__link" href="index.html">
           <img
