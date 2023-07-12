@@ -1099,6 +1099,47 @@ button,
   }
 }
 
+.period-list {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+  grid-template-columns: repeat(3, auto);
+  gap: 46px;
+  padding: 0 409px;
+  margin: 0;
+  list-style-type: none;
+}
+.period-list::after {
+  content: "";
+  position: absolute;
+  left: 409px;
+  right: 409px;
+  bottom: 0;
+  height: 2px;
+  background-color: rgba(120, 120, 120, 0.2);
+}
+
+.period-list__link {
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  font-size: 20px;
+  color: rgba(16, 38, 84, 0.5);
+}
+.period-list__link--active {
+  color: #102654;
+}
+.period-list__link--active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #d10a42;
+}
+
 .site-list {
   display: -ms-grid;
   display: grid;
@@ -1204,10 +1245,22 @@ button,
   margin: auto;
 }
 
+.subscription {
+  padding: 120px calc(50% - 580px);
+  background-color: #f8f9fc;
+}
+
+.subscription__title {
+  text-align: center;
+}
+
 .subtitle {
-  margin: 0;
+  margin: 0 0 5px;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
+  font-size: 54px;
+  line-height: 64px;
+  letter-spacing: 1.62px;
 }
 .subtitle--hero {
   padding: 118px 52px 19px;
@@ -1234,6 +1287,7 @@ button,
 .subtitle--gym {
   margin-bottom: 26px;
   font-size: 48px;
+  line-height: 24px;
   letter-spacing: 1.44px;
 }
 @media (max-width: 1199px) {
