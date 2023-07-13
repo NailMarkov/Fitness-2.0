@@ -3,9 +3,18 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 46px;
-  padding: 0 409px;
-  margin: 0;
+  margin: 0 auto 39px;
+  padding: 0;
+  width: 342px;
   list-style-type: none;
+
+  @include vp-1199 {
+
+  }
+
+  @include vp-767 {
+
+  }
 
   &::after {
     content: "";
@@ -24,6 +33,17 @@
   padding: 16px 0;
   font-size: 20px;
   color: rgba(16, 38, 84, 0.50);
+
+  @include vp-1199 {
+    padding: 14px 0;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &--active {
     color: $color-sapphire;

@@ -1,0 +1,27 @@
+.card {
+  padding: 68px 77px;
+}
+
+.card__title {
+  margin: 0 0 14px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.card__time {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+  color: #495a7d;
+  text-align: center;
+}
+
+.card__price {
+  margin: 0;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150px;
+  color: $color-egyptian-blue;
+}
