@@ -1,6 +1,31 @@
 .subscription {
+  position: relative;
   padding: 120px $p-desktop;
   background-color: $color-ghost-white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    right: -34px;
+    width: 321px;
+    height: 384px;
+    background-image: url("../../img/bg-equipment.png");
+    background-repeat: no-repeat;
+    z-index: 0;
+
+    @include vp-1199 {
+      bottom: -125px;
+      right: 0;
+      width: 347px;
+      height: 444px;
+      background-image: url("../../img/bg-equipment-tablet.png");
+    }
+
+    @include vp-767 {
+      content: none;
+    }
+  }
 
   @include vp-1199 {
     padding: 100px calc(50% - 221px);

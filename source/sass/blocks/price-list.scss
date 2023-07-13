@@ -1,8 +1,20 @@
 .price-list {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  z-index: 1;
+
+  @include vp-1199 {
+    grid-template-columns: none;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 41px;
+  }
+
+  @include vp-767 {
+    gap: 31px;
+  }
 }
