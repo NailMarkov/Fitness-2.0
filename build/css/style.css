@@ -624,6 +624,7 @@ button,
   border-image-slice: 1;
 }
 .card--active .card__btn {
+  border: none;
   color: #ffffff;
   background-image: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
 }
@@ -956,10 +957,21 @@ button,
 }
 
 .gym__video {
+  position: relative;
   margin-left: 437px;
   margin-top: -113px;
   width: 364px;
   height: 228px;
+  background-image: url("../img/poster.jpg");
+}
+.gym__video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 54, 122, 0.5);
 }
 @media (max-width: 1199px) {
   .gym__video {
@@ -967,12 +979,14 @@ button,
     margin-top: -84px;
     width: 266px;
     height: 167px;
+    background-image: url("../img/poster-tablet.jpg");
   }
 }
 @media (max-width: 767px) {
   .gym__video {
     margin: 0;
     width: 320px;
+    background-image: url("../img/poster-mobile.jpg");
   }
 }
 
@@ -1431,11 +1445,11 @@ button,
 .subscription::after {
   content: "";
   position: absolute;
-  bottom: -40px;
-  right: -34px;
-  width: 321px;
-  height: 384px;
-  background-image: url("../../img/bg-equipment.png");
+  bottom: -150px;
+  right: 0;
+  width: 287px;
+  height: 494px;
+  background-image: url("../img/bg-equipment.png");
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -1445,7 +1459,7 @@ button,
     right: 0;
     width: 347px;
     height: 444px;
-    background-image: url("../../img/bg-equipment-tablet.png");
+    background-image: url("../img/bg-equipment-tablet.png");
   }
 }
 @media (max-width: 767px) {
@@ -1539,6 +1553,57 @@ button,
     letter-spacing: 0.96px;
     text-align: left;
   }
+}
+
+.video__player {
+  display: none;
+}
+
+.video.is-active .video__player {
+  display: block;
+}
+.video.is-active .video__control {
+  display: none;
+}
+
+.video__control {
+  position: relative;
+  top: 28%;
+  left: 36%;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  height: 100px;
+  background-color: inherit;
+  background-image: url("../img/svg/play-default.svg");
+  background-size: 100px 100px;
+  border: none;
+  border-radius: 100px;
+  z-index: 3;
+  cursor: pointer;
+}
+@media (max-width: 1199px) {
+  .video__control {
+    width: 73px;
+    height: 73px;
+    background-size: 73px 73px;
+    border-radius: 73px;
+  }
+}
+@media (max-width: 767px) {
+  .video__control {
+    left: 39%;
+  }
+}
+.video__control:hover, .video__control:focus {
+  background-image: url("../img/svg/play-interface.svg");
+  outline: none;
+}
+.video__control:active {
+  background-image: url("../img/svg/play-active.svg");
+}
+.video__control:disabled {
+  opacity: 0.4;
 }
 
 /* @mixin hover-focus {

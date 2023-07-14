@@ -23,6 +23,8 @@ const initVideo = (containerElement) => {
   const initPlayer = () => {
     window.onYouTubePlayerAPIReady = () => {
       youtubePlayer = new YT.Player(youtubeElement.id, {
+        width: '100%',
+        height: '100%',
         events: {
           onStateChange(event) {
             if (event.data === 0) {

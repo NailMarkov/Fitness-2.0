@@ -79,20 +79,34 @@
 }
 
 .gym__video {
+  position: relative;
   margin-left: 437px;
   margin-top: -113px;
   width: 364px;
   height: 228px;
+  background-image: url("../img/poster.jpg");
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 54, 122, 0.50);
+  }
 
   @include vp-1199 {
     margin-left: 206px;
     margin-top: -84px;
     width: 266px;
     height: 167px;
+    background-image: url("../img/poster-tablet.jpg");
   }
 
   @include vp-767 {
     margin: 0;
     width: 320px;
+    background-image: url("../img/poster-mobile.jpg");
   }
 }

@@ -6,11 +6,11 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -40px;
-    right: -34px;
-    width: 321px;
-    height: 384px;
-    background-image: url("../../img/bg-equipment.png");
+    bottom: -150px;
+    right: 0;
+    width: 287px;
+    height: 494px;
+    background-image: url("../img/bg-equipment.png");
     background-repeat: no-repeat;
     z-index: 0;
 
@@ -19,7 +19,7 @@
       right: 0;
       width: 347px;
       height: 444px;
-      background-image: url("../../img/bg-equipment-tablet.png");
+      background-image: url("../img/bg-equipment-tablet.png");
     }
 
     @include vp-767 {

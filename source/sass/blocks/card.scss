@@ -17,6 +17,7 @@
     border-image-slice: 1;
 
     .card__btn {
+      border: none;
       color: $color-default-white;
       background-image: $red-to-blue;
     }
