@@ -114,7 +114,7 @@
               <p class="card__time">12 занятий</p>
               <p class="card__price">
                 5000
-                <span class="card__bg">5000</span>
+                <span class="card__price-bg">5000</span>
               </p>
               <button class="card__btn btn btn--bg-light" type="button">купить абонемент</button>
             </div>
@@ -125,9 +125,9 @@
               <p class="card__time">с 8:00 до 17:00 </p>
               <p class="card__price">
                 1700
-                <span class="card__bg">1700</span>
+                <span class="card__price-bg">1700</span>
               </p>
-              <button class="card__btn btn btn--bg-light" type="button">купить абонемент</button>
+              <button class="card__btn btn" type="button">купить абонемент</button>
             </div>
           </li>
           <li class="price-list__item">
@@ -136,7 +136,7 @@
               <p class="card__time">с 8:00 до 22:00 </p>
               <p class="card__price">
                 2700
-                <span class="card__bg">2700</span>
+                <span class="card__price-bg">2700</span>
               </p>
               <button class="card__btn btn btn--bg-light" type="button">купить абонемент</button>
             </div>
@@ -153,10 +153,10 @@
               <h3 class="games__subtitle">Дата</h3>
               <p class="games__date">
                 <span class="games__figure">7</span>
-                <span class="games__month">марта 2019</span>
+                <span class="games__month">Марта 2019</span>
               </p>
             </div>
-            <div class="games__bloc">
+            <div class="games__block">
               <h3 class="games__subtitle">Время</h3>
               <p class="games__time">
                 <span class="games__figure">12:00</span>
@@ -164,11 +164,18 @@
             </div>
           </div>
           <p class="games__text">Ежегодные соревнования по CrossFit</p>
-          <button class="games__buton" type="button">заполнить заявку</button>
+          <button class="games__buton btn" type="button">заполнить заявку</button>
         </div>
         <div class="games__game-picture">
           <picture>
-            <img src="img/crossfit-desktop.jpg" alt="Фото участника соревнований" srcset="img/crossfit-desktop@2x.jpg"
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/crossfit-mobile.webp, img/crossfit-mobile@2x.webp 2x" />
+            <source type="image/webp" media="(max-width: 1199px)"
+              srcset="img/crossfit-tablet.webp, img/crossfit-tablet@2x.webp 2x" />
+            <source type="image/webp" srcset="img/crossfit-desktop.webp, img/crossfit-desktop@2x.webp 2x" />
+            <source media="(max-width: 767px)" srcset="img/crossfit-desktop.jpg 1x, img/crossfit-desktop@2x.jpg 2x" />
+            <source media="(max-width: 1199px)" srcset="img/crossfit-tablet.jpg 1x, img/crossfit-tablet@2x.jpg 2x" />
+            <img src="img/crossfit-desktop.jpg" alt="Фото участника соревнований." srcset="img/crossfit-desktop@2x.jpg"
               width="660" height="500">
           </picture>
         </div>
