@@ -724,6 +724,32 @@ button,
   padding: 24px 42px;
 }
 
+.coach {
+  position: relative;
+  width: 260px;
+  height: 294px;
+}
+
+.coach__name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.coaches {
+  padding: 6px calc(50% - 580px) 105px;
+}
+
+.coaches__title {
+  margin-bottom: 48px;
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;

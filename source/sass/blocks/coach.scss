@@ -1,0 +1,17 @@
+.coach {
+  position: relative;
+  width: 260px;
+  height: 294px;
+}
+
+.coach__name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: $color-default-white;
+  text-align: center;
+}
