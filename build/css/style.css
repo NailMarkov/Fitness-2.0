@@ -724,22 +724,84 @@ button,
   padding: 24px 42px;
 }
 
+.coaches__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 49px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .coach {
   position: relative;
   width: 260px;
   height: 294px;
+  color: #ffffff;
+}
+.coach:hover.coach__info {
+  display: block;
 }
 
 .coach__name {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 23px;
+  left: 0;
   margin: 0;
+  width: 100%;
   font-weight: 700;
   font-size: 18px;
   line-height: 27px;
-  color: #ffffff;
   text-align: center;
+}
+
+.coach__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 52px 46px 39px;
+  background-color: rgba(16, 38, 84, 0.89);
+}
+
+.coach__title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+
+.coach__speciality {
+  margin: 0 0 37px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #b6bdcc;
+  text-align: center;
+}
+
+.coach__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.coach__item {
+  position: relative;
+  margin-bottom: 13px;
+  padding-left: 25px;
+  font-size: 14px;
+  line-height: 21px;
+}
+.coach__item::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 9px;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 6px;
 }
 
 .coaches {
