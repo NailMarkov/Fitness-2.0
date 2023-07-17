@@ -1521,19 +1521,50 @@ button,
 
 .btn--prev {
   position: absolute;
-  top: 50px;
-  left: -40px;
-  padding: 0;
+  top: 118px;
+  left: -76px;
+  padding: 11px 21px 11px 19px;
   width: 56px;
+  height: 56px;
   border: none;
   border-radius: 50%;
 }
 
+.btn--prev.focus-visible:focus {
+  border: 1px solid #102654;
+}
+
+.btn--prev:active {
+  background-color: #102654;
+}
+
+.btn--prev:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .btn--next {
-  padding: 0;
+  position: absolute;
+  top: 118px;
+  right: -76px;
+  padding: 11px 21px 11px 19px;
   width: 56px;
+  height: 56px;
   border: none;
   border-radius: 50%;
+}
+
+.btn--next.focus-visible:focus {
+  border: 1px solid #102654;
+}
+
+.btn--next:active {
+  background-color: #102654;
+}
+
+.btn--next:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .btn--red {
@@ -1631,6 +1662,11 @@ button,
 
 .coach:hover .coach__name {
   display: none;
+}
+
+.coach img {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .coach__name {
@@ -2327,8 +2363,47 @@ button,
     padding: 61px 111px;
   }
 
+  .coach {
+    width: 268px;
+  }
+
+  .coach__name {
+    left: 4px;
+  }
+
+  .coach__info {
+    padding: 51px 46px 50px 55px;
+  }
+
+  .coach__title {
+    margin-left: 2px;
+    text-align: left;
+  }
+
+  .coach__speciality {
+    margin-bottom: 38px;
+    margin-left: -17px;
+  }
+
+  .coach__item {
+    padding-left: 16px;
+  }
+
+  .coach__item::before {
+    left: 0;
+  }
+
+  .coaches {
+    padding: 50px calc(50% - 283px) 100px;
+  }
+
+  .coaches__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
   .games {
-    padding: 100px calc(50% - 339px);
+    padding: 100px calc(50% - 339px) 50px;
   }
 
   .games__event-block {
@@ -2571,6 +2646,27 @@ button,
     padding: 0 15px;
   }
 
+  .btn--prev {
+    top: 121px;
+    left: -42px;
+    padding: 5px 12px 4px 11px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn--next {
+    top: 121px;
+    right: -42px;
+    padding: 5px 12px 4px 11px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .btn__icon {
+    width: 10px;
+    height: 19px;
+  }
+
   .card {
     padding: 55px 42px;
   }
@@ -2606,12 +2702,44 @@ button,
     line-height: 120px;
   }
 
+  .coach {
+    height: 274px;
+  }
+
+  .coach__info {
+    padding: 41px 33px 10px 40px;
+  }
+
+  .coach__title {
+    margin-left: 0;
+  }
+
+  .coach__speciality {
+    margin-left: -7px;
+  }
+
+  .coach__item {
+    padding-left: 10px;
+  }
+
+  .coach__item::before {
+    left: -6px;
+  }
+
+  .coaches {
+    padding: 39px calc(50% - 113px) 70px;
+  }
+
+  .coaches__title {
+    margin-bottom: 49px;
+  }
+
   .games {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 70px calc(50% - 145px);
+    padding: 70px calc(50% - 145px) 30px;
   }
 
   .games__event-block {
@@ -2859,6 +2987,14 @@ button,
 }
 
 @media (hover: hover) {
+  .btn--prev:hover:not(.focus-visible) {
+    border: 1px solid #102654;
+  }
+
+  .btn--next:hover:not(.focus-visible) {
+    border: 1px solid #102654;
+  }
+
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
   }
