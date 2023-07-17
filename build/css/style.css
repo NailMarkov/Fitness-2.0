@@ -1425,12 +1425,23 @@ button,
   color: #102654;
   border: 2px solid #102654;
 }
+.btn--prev {
+  position: absolute;
+  top: 50px;
+  left: -40px;
+  padding: 0;
+  width: 56px;
+  border: none;
+  border-radius: 50%;
+}
+.btn--next {
+  padding: 0;
+  width: 56px;
+  border: none;
+  border-radius: 50%;
+}
 .btn--red {
   background-color: #ff1420;
-}
-.btn:disabled {
-  opacity: 0.5;
-  pointer-events: none;
 }
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
@@ -1642,6 +1653,10 @@ button,
 
 .coaches__title {
   margin: 0 0 49px;
+}
+
+.coaches__wrapper {
+  position: relative;
 }
 
 .custom-input,

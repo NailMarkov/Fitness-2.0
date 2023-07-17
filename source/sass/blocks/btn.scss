@@ -21,14 +21,25 @@
     border: 2px solid $color-sapphire;
   }
 
-  &--red {
-    background-color: $color-torch-red;
+  &--prev {
+    position: absolute;
+    top: 50px;
+    left: -40px;
+    padding: 0;
+    width: 56px;
+    border: none;
+    border-radius: 50%;
   }
 
-  &:disabled {
-    opacity: 0.5;
+  &--next {
+    padding: 0;
+    width: 56px;
+    border: none;
+    border-radius: 50%;
+  }
 
-    pointer-events: none;
+  &--red {
+    background-color: $color-torch-red;
   }
 
   @include hover-focus {
