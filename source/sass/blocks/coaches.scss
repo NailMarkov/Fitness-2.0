@@ -1,9 +1,26 @@
 .coaches {
   padding: 6px $p-desktop 105px;
+
+  @include vp-1199 {
+    padding: 50px calc(50% - 283px) 100px;
+  }
+
+  @include vp-767 {
+    padding: 39px calc(50% - 113px) 70px;
+  }
 }
 
 .coaches__title {
   margin: 0 0 49px;
+
+  @include vp-1199 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 49px;
+  }
 }
 
 .coaches__wrapper {

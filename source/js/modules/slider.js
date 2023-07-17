@@ -6,6 +6,10 @@ export const initSlider = () => {
       nextEl: document.querySelector('[data-next]'),
     },
     breakpoints: {
+      320: {
+        initialSlide: 2,
+        slidesPerView: 1,
+      },
       768: {
         initialSlide: 2,
         slidesPerView: 2,

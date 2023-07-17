@@ -1427,18 +1427,71 @@ button,
 }
 .btn--prev {
   position: absolute;
-  top: 50px;
-  left: -40px;
-  padding: 0;
+  top: 118px;
+  left: -76px;
+  padding: 11px 21px 11px 19px;
   width: 56px;
+  height: 56px;
   border: none;
   border-radius: 50%;
 }
+@media (max-width: 767px) {
+  .btn--prev {
+    top: 121px;
+    left: -42px;
+    padding: 5px 12px 4px 11px;
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (hover: hover) {
+  .btn--prev:hover:not(.focus-visible) {
+    border: 1px solid #102654;
+  }
+}
+.btn--prev.focus-visible:focus {
+  border: 1px solid #102654;
+}
+.btn--prev:active {
+  background-color: #102654;
+}
+.btn--prev:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
 .btn--next {
-  padding: 0;
+  position: absolute;
+  top: 118px;
+  right: -76px;
+  padding: 11px 21px 11px 19px;
   width: 56px;
+  height: 56px;
   border: none;
   border-radius: 50%;
+}
+@media (max-width: 767px) {
+  .btn--next {
+    top: 121px;
+    right: -42px;
+    padding: 5px 12px 4px 11px;
+    width: 32px;
+    height: 32px;
+  }
+}
+@media (hover: hover) {
+  .btn--next:hover:not(.focus-visible) {
+    border: 1px solid #102654;
+  }
+}
+.btn--next.focus-visible:focus {
+  border: 1px solid #102654;
+}
+.btn--next:active {
+  background-color: #102654;
+}
+.btn--next:disabled {
+  opacity: 0.3;
+  pointer-events: none;
 }
 .btn--red {
   background-color: #ff1420;
@@ -1450,6 +1503,13 @@ button,
 }
 .btn.focus-visible:focus {
   opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+  .btn__icon {
+    width: 10px;
+    height: 19px;
+  }
 }
 
 .card {
@@ -1580,11 +1640,26 @@ button,
   height: 294px;
   color: #ffffff;
 }
+@media (max-width: 1199px) {
+  .coach {
+    width: 268px;
+  }
+}
+@media (max-width: 767px) {
+  .coach {
+    height: 274px;
+  }
+}
 .coach:hover .coach__info {
   display: block;
 }
 .coach:hover .coach__name {
   display: none;
+}
+
+.coach img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .coach__name {
@@ -1598,6 +1673,11 @@ button,
   line-height: 27px;
   text-align: center;
 }
+@media (max-width: 1199px) {
+  .coach__name {
+    left: 4px;
+  }
+}
 
 .coach__info {
   position: absolute;
@@ -1607,12 +1687,33 @@ button,
   padding: 52px 46px 39px;
   background-color: rgba(16, 38, 84, 0.89);
 }
+@media (max-width: 1199px) {
+  .coach__info {
+    padding: 51px 46px 50px 55px;
+  }
+}
+@media (max-width: 767px) {
+  .coach__info {
+    padding: 41px 33px 10px 40px;
+  }
+}
 
 .coach__title {
   margin: 0;
   font-size: 18px;
   line-height: 27px;
   text-align: center;
+}
+@media (max-width: 1199px) {
+  .coach__title {
+    margin-left: 2px;
+    text-align: left;
+  }
+}
+@media (max-width: 767px) {
+  .coach__title {
+    margin-left: 0;
+  }
 }
 
 .coach__speciality {
@@ -1621,6 +1722,17 @@ button,
   line-height: 16px;
   color: #b6bdcc;
   text-align: center;
+}
+@media (max-width: 1199px) {
+  .coach__speciality {
+    margin-bottom: 38px;
+    margin-left: -17px;
+  }
+}
+@media (max-width: 767px) {
+  .coach__speciality {
+    margin-left: -7px;
+  }
 }
 
 .coach__list {
@@ -1636,6 +1748,16 @@ button,
   font-size: 14px;
   line-height: 21px;
 }
+@media (max-width: 1199px) {
+  .coach__item {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .coach__item {
+    padding-left: 10px;
+  }
+}
 .coach__item::before {
   content: "";
   position: absolute;
@@ -1646,13 +1768,44 @@ button,
   background-color: #ffffff;
   border-radius: 6px;
 }
+@media (max-width: 1199px) {
+  .coach__item::before {
+    left: 0;
+  }
+}
+@media (max-width: 767px) {
+  .coach__item::before {
+    left: -6px;
+  }
+}
 
 .coaches {
   padding: 6px calc(50% - 580px) 105px;
 }
+@media (max-width: 1199px) {
+  .coaches {
+    padding: 50px calc(50% - 283px) 100px;
+  }
+}
+@media (max-width: 767px) {
+  .coaches {
+    padding: 39px calc(50% - 113px) 70px;
+  }
+}
 
 .coaches__title {
   margin: 0 0 49px;
+}
+@media (max-width: 1199px) {
+  .coaches__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .coaches__title {
+    margin-bottom: 49px;
+  }
 }
 
 .coaches__wrapper {
@@ -1804,7 +1957,7 @@ button,
 }
 @media (max-width: 1199px) {
   .games {
-    padding: 100px calc(50% - 339px);
+    padding: 100px calc(50% - 339px) 50px;
   }
 }
 @media (max-width: 767px) {
@@ -1813,7 +1966,7 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 70px calc(50% - 145px);
+    padding: 70px calc(50% - 145px) 30px;
   }
 }
 
