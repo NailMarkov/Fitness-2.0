@@ -1,17 +1,15 @@
-.coaches__container {
-  display: flex;
-  margin-top: 49px;
-  justify-content: space-between;
-}
-
 .coach {
   position: relative;
   width: 260px;
   height: 294px;
   color: $color-default-white;
 
-  &:hover.coach__info{
+  &:hover .coach__info {
     display: block;
+  }
+
+  &:hover .coach__name {
+    display: none;
   }
 }
 
