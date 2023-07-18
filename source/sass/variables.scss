@@ -22,7 +22,8 @@ $color-black-russian:               #030a1a;
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-$red-to-blue:                       linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+$red-to-blue:                       linear-gradient(151deg, $color-torch-red-second 0%, #003eb7 100%);
+$lowRed-to-blue:                    linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
 // Typography
 // ---------------------------------
 

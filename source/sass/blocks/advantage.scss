@@ -1,0 +1,54 @@
+.advantage {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas:
+    "num titl"
+    "num des";
+  height: 71px;
+  gap: 5px 31px;
+
+  @include vp-1199 {
+    gap: 5px 29px;
+  }
+}
+
+.advantage__numbers {
+  grid-area: num;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.advantage__figure {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 62px;
+  background: $lowRed-to-blue;
+  background-clip: text;
+  color: transparent;
+
+  @include vp-1199 {
+    font-size: 58px;
+    line-height: 44px;
+  }
+}
+
+.advantage__title {
+  grid-area: titl;
+  margin: 0;
+  font-size: 22px;
+  line-height: 33px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.advantage__description {
+  grid-area: des;
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+}

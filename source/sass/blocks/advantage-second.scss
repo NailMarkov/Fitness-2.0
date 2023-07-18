@@ -1,0 +1,52 @@
+.advantage-second {
+  position: relative;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  margin-top: 7px;
+  padding: 66px 34px 58px;
+  background-color: #1c3374;
+  color: $color-default-white;
+  text-align: center;
+
+  @include vp-1199 {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    margin: 0 auto;
+    padding: 45px 135px;
+    width: 442px;
+  }
+}
+
+.advantage-second__numbers {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 31px;
+}
+
+.advantage-second__figure {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 49px;
+
+  @include vp-1199 {
+    font-size: 74px;
+  }
+}
+
+.advantage-second__text {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 33px;
+  }
+}
+
+.advantage-second__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
