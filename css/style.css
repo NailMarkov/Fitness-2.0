@@ -1494,6 +1494,145 @@ button,
   padding: 0 103px;
 }
 
+.advantage {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 31px auto;
+  grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: auto 5px auto;
+  grid-template-areas: "num titl" "num des";
+  height: 71px;
+  gap: 5px 31px;
+}
+
+.advantage__numbers {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: num;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+}
+
+.advantage__figure {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 62px;
+  background: linear-gradient(129deg, #d10a42 0%, #0041ca 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.advantage__title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: titl;
+  margin: 0;
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.advantage__description {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: des;
+  margin: 0;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.advantage-second {
+  position: relative;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  margin-top: 7px;
+  padding: 66px 34px 58px;
+  background-color: #1c3374;
+  color: #ffffff;
+  text-align: center;
+}
+
+.advantage-second__numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 0 31px;
+}
+
+.advantage-second__figure {
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 49px;
+}
+
+.advantage-second__text {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+}
+
+.advantage-second__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.advantages {
+  padding: 108px calc(50% - 501px) 130px;
+  background-color: #f8f9fc;
+}
+
+.advantages__title {
+  margin: 0 0 49px;
+  text-align: center;
+}
+
+.advanteges__wrapper {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 321px 240px 335px;
+  grid-template-columns: 321px 240px 335px;
+  gap: 159px 60px;
+}
+
+.advanteges__wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18px;
+  width: 340px;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+}
+
+.advanteges__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -18px;
+  width: 340px;
+  height: 2px;
+  background-color: rgba(209, 10, 66, 0.2);
+}
+
 .btn {
   display: block;
   font: inherit;
@@ -1583,15 +1722,15 @@ button,
 .card--active {
   padding: 61px 70px;
   border: 7px solid transparent;
-  -o-border-image: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
-  border-image: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+  -o-border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   border-image-slice: 1;
 }
 
 .card--active .card__btn {
   border: none;
   color: #ffffff;
-  background-image: linear-gradient(151deg, #ED0233 0%, #003EB7 100%);
+  background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
 }
 
 .card__title {
@@ -2353,6 +2492,57 @@ button,
 @media (max-width: 1199px) {
   .container {
     padding: 0 45px;
+  }
+
+  .advantage {
+    gap: 5px 29px;
+  }
+
+  .advantage__figure {
+    font-size: 58px;
+    line-height: 44px;
+  }
+
+  .advantage__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .advantage-second {
+    grid-column: 1/-1;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    margin: 0 auto;
+    padding: 45px 135px;
+    width: 442px;
+  }
+
+  .advantage-second__figure {
+    font-size: 74px;
+  }
+
+  .advantage-second__text {
+    font-size: 22px;
+    line-height: 33px;
+  }
+
+  .advantages {
+    padding: 91px calc(50% - 339px) 100px;
+  }
+
+  .advanteges__wrapper {
+    -ms-grid-columns: 294px 314px;
+    grid-template-columns: 294px 314px;
+    gap: 42px 60px;
+  }
+
+  .advanteges__wrapper::after {
+    content: none;
+  }
+
+  .advanteges__wrapper::before {
+    content: none;
   }
 
   .card {
