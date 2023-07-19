@@ -1,6 +1,7 @@
 // Vendor
 // ---------------------------------
-
+@import "vendor/data-accordion";
+@import "vendor/data-tabs";
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
@@ -18,6 +19,7 @@
 // Blocks
 // ---------------------------------
 
+@import "blocks/accordion";
 @import "blocks/advantage";
 @import "blocks/advantage-second";
 @import "blocks/advantages";
@@ -26,6 +28,7 @@
 @import "blocks/coach";
 @import "blocks/coaches";
 @import "blocks/custom-input";
+@import "blocks/faq";
 @import "blocks/games";
 @import "blocks/gym";
 @import "blocks/hero";
@@ -41,6 +44,7 @@
 @import "blocks/sales";
 @import "blocks/subscription";
 @import "blocks/subtitle";
+@import "blocks/tabs";
 @import "blocks/video";
 
 // ---------------------------------

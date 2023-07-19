@@ -1,0 +1,25 @@
+.faq {
+  padding: 120px $p-desktop;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding: 100px $p-tablet;
+  }
+}
+
+.faq__title {
+  margin: 0 0 40px;
+
+  @include vp-1199 {
+    margin-bottom: 39px;
+    text-align: center;
+  }
+}
+
+.faq__wrapper {
+  display: flex;
+
+  @include vp-1199 {
+    flex-direction: column;
+  }
+}

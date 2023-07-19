@@ -3,6 +3,8 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initVideos} from './modules/video';
 import {initSlider} from './modules/slider';
+import {initTabs} from './vendor/init-tabs';
+import {initAccordions} from './vendor/init-accordion';
 
 // ---------------------------------
 
@@ -15,8 +17,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  initAccordions();
   initVideos();
   initSlider();
+  initTabs();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

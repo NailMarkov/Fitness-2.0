@@ -5,18 +5,19 @@
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 0.6px;
-  background-color: inherit;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
   transition: opacity $trans-default;
 
   &--bg-dark {
+    background-color: inherit;
     color: $color-default-white;
     border: 4px solid $color-default-white;
   }
 
   &--bg-light {
+    background-color: inherit;
     color: $color-sapphire;
     border: 2px solid $color-sapphire;
   }
@@ -28,6 +29,7 @@
     padding: 11px 21px 11px 19px;
     width: 56px;
     height: 56px;
+    background-color: inherit;
     border: none;
     border-radius: 50%;
 
@@ -64,6 +66,7 @@
     padding: 11px 21px 11px 19px;
     width: 56px;
     height: 56px;
+    background-color: inherit;
     border: none;
     border-radius: 50%;
 
@@ -91,14 +94,6 @@
       opacity: 0.3;
       pointer-events: none;
     }
-  }
-
-  &--red {
-    background-color: $color-torch-red;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }
 

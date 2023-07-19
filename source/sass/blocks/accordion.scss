@@ -1,0 +1,81 @@
+.accordion {
+  flex-grow: 1;
+  &__element:last-child {
+    margin-bottom: 0;
+  }
+
+  &__element {
+    margin-bottom: 34px;
+    padding: 10px;
+  }
+
+  &__element.is-active > &__button {
+    opacity: 0.5;
+  }
+
+  &__wrapper {
+    padding: 10px;
+  }
+}
+
+.accordion__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.accordion__item {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(28, 51, 116, 0.20);
+
+  &:first-child {
+    border-top: 1px solid rgba(28, 51, 116, 0.20);
+  }
+}
+
+.accordion__problem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.1px;
+}
+
+.accordion__button {
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  background-color: inherit;
+  border: 1px solid $color-sapphire;
+  border-radius: 50%;
+
+  &--open {
+    background-color: $color-sapphire;
+
+    .accordion__icon {
+      color: $color-default-white;
+    }
+  }
+}
+
+.accordion__icon {
+  color: $color-default-white;
+}
+
+.accordion__answer {
+  margin: 0;
+  padding-right: 200px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+
+  @include vp-1199 {
+    padding-right: 160px;
+  }
+}
