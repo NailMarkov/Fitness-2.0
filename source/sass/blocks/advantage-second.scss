@@ -9,11 +9,19 @@
   text-align: center;
 
   @include vp-1199 {
+    justify-self: center;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    margin: 0 auto;
-    padding: 45px 135px;
+    margin: 0 0 8px 8px;
+    padding: 45px 135px 39px;
     width: 442px;
+  }
+
+  @include vp-767 {
+    grid-row: 3 / 4;
+    margin: 8px 0 5px 0;
+    padding: 50px 74px 45px;
+    width: 320px;
   }
 }
 
@@ -21,6 +29,14 @@
   display: flex;
   flex-direction: column;
   margin: 0 0 31px;
+
+  @include vp-1199 {
+    margin-bottom: 12px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 8px;
+  }
 }
 
 .advantage-second__figure {
@@ -30,7 +46,12 @@
   line-height: 49px;
 
   @include vp-1199 {
+    margin-bottom: 12px;
     font-size: 74px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 7px;
   }
 }
 

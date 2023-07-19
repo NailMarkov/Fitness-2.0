@@ -10,6 +10,18 @@
   @include vp-1199 {
     gap: 5px 29px;
   }
+
+  @include vp-767 {
+    grid-template-columns: auto;
+    grid-template-areas:
+    "num"
+    "titl"
+    "des";
+    gap: 12px;
+    padding: 0 46px;
+    height: 155px;
+    text-align: center;
+  }
 }
 
 .advantage__numbers {
@@ -31,6 +43,10 @@
     font-size: 58px;
     line-height: 44px;
   }
+
+  @include vp-767 {
+    line-height: 53px;
+  }
 }
 
 .advantage__title {
@@ -41,7 +57,11 @@
 
   @include vp-1199 {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 14px;
+  }
+
+  @include vp-767 {
+    line-height: 12px;
   }
 }
 
@@ -51,4 +71,8 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 23px;
+
+  @include vp-767 {
+    line-height: 21px;
+  }
 }

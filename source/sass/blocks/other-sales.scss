@@ -1,0 +1,82 @@
+.other-sales {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 28px 33px;
+  color: #1c3374;
+  border: 7px solid transparent;
+  border-image: $red-to-blue;
+  border-image-slice: 1;
+
+  @include vp-767 {
+    padding: 39px 42px 44px;
+    text-align: center;
+  }
+}
+
+.other-sales__subtitle {
+  margin: 0 0 15px;
+  font-size: 26px;
+  line-height: 17px;
+}
+
+.other-sales__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 21px;
+
+  br {
+    display: none;
+  }
+
+  @include vp-1199 {
+    margin-bottom: 51px;
+    line-height: 22px;
+
+    br {
+      display: block;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 29px;
+  }
+}
+
+.other-sales__link {
+  position: relative;
+  margin-top: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 9px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+
+  @include vp-767 {
+    margin: 0 auto;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #1c3374;
+  }
+
+  @include hover {
+    opacity: 0.7;
+  }
+
+  @include focus {
+    padding: 10px;
+    color: $color-sapphire;
+    outline: 1px solid $color-sapphire;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
