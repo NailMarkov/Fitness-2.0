@@ -1466,19 +1466,6 @@ button,
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
-.accordion__element:last-child {
-  margin-bottom: 0;
-}
-.accordion__element {
-  margin-bottom: 34px;
-  padding: 10px;
-}
-.accordion__element.is-active > .accordion__button {
-  opacity: 0.5;
-}
-.accordion__wrapper {
-  padding: 10px;
-}
 
 .accordion__list {
   margin: 0;
@@ -1487,34 +1474,80 @@ button,
 }
 
 .accordion__item {
-  padding: 24px 0;
+  padding: 25px 0 24px;
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+}
+@media (max-width: 1199px) {
+  .accordion__item {
+    padding: 24px 0 25px;
+  }
+}
+@media (max-width: 767px) {
+  .accordion__item {
+    padding: 20px 0;
+  }
 }
 .accordion__item:first-child {
   border-top: 1px solid rgba(28, 51, 116, 0.2);
 }
+.accordion__item.is-active .accordion__problem {
+  margin-bottom: 10px;
+}
+@media (max-width: 1199px) {
+  .accordion__item.is-active .accordion__problem {
+    margin-bottom: 7px;
+  }
+}
+@media (max-width: 767px) {
+  .accordion__item.is-active .accordion__problem {
+    margin-bottom: 11px;
+  }
+}
+.accordion__item.is-active .accordion__button {
+  background-color: #102654;
+}
+.accordion__item.is-active .accordion__button.accordion__icon-minus {
+  display: block;
+}
+.accordion__item.is-active .accordion__button.accordion__icon-plus {
+  display: none;
+}
 
 .accordion__problem {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 42px;
+  grid-template-columns: 1fr 42px;
+}
+@media (max-width: 767px) {
+  .accordion__problem {
+    gap: 25px;
+  }
 }
 
 .accordion__title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin: 0;
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 0.1px;
 }
+@media (max-width: 767px) {
+  .accordion__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
 
 .accordion__button {
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
   padding: 0;
   width: 42px;
   height: 42px;
@@ -1522,15 +1555,46 @@ button,
   border: 1px solid #102654;
   border-radius: 50%;
 }
-.accordion__button--open {
-  background-color: #102654;
-}
-.accordion__button--open .accordion__icon {
-  color: #ffffff;
+@media (max-width: 767px) {
+  .accordion__button {
+    -ms-grid-column-align: end;
+        justify-self: end;
+    padding: 10px;
+    width: 32px;
+    height: 32px;
+  }
 }
 
-.accordion__icon {
+.accordion__icon-minus {
+  position: absolute;
+  top: 9px;
+  left: 9px;
   color: #ffffff;
+}
+@media (max-width: 767px) {
+  .accordion__icon-minus {
+    top: 9px;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.accordion__icon-plus {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  display: block;
+  color: #102654;
+}
+@media (max-width: 767px) {
+  .accordion__icon-plus {
+    top: 9px;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+    color: #102654;
+  }
 }
 
 .accordion__answer {
@@ -1543,6 +1607,13 @@ button,
 @media (max-width: 1199px) {
   .accordion__answer {
     padding-right: 160px;
+  }
+}
+@media (max-width: 767px) {
+  .accordion__answer {
+    padding-right: 20px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -2374,6 +2445,11 @@ button,
     padding: 100px calc(50% - 339px);
   }
 }
+@media (max-width: 767px) {
+  .faq {
+    padding: 77px calc(50% - 145px) 70px;
+  }
+}
 
 .faq__title {
   margin: 0 0 40px;
@@ -2382,6 +2458,11 @@ button,
   .faq__title {
     margin-bottom: 39px;
     text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .faq__title {
+    margin-bottom: 36px;
   }
 }
 
@@ -3595,6 +3676,13 @@ button,
     width: 100%;
   }
 }
+@media (max-width: 767px) {
+  .tabs {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+}
 
 .tabs__link {
   display: block;
@@ -3611,7 +3699,16 @@ button,
     width: 162px;
   }
 }
-.tabs__link--active {
+@media (max-width: 767px) {
+  .tabs__link {
+    margin-bottom: 7px;
+    padding: 14px 14px 15px;
+    width: 141px;
+    font-size: 16px;
+    line-height: 14px;
+  }
+}
+.tabs__link.is-active {
   padding-bottom: 18px;
   background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   color: #ffffff;

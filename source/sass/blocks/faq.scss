@@ -5,6 +5,10 @@
   @include vp-1199 {
     padding: 100px $p-tablet;
   }
+
+  @include vp-767 {
+    padding: 77px $p-mobile 70px;
+  }
 }
 
 .faq__title {
@@ -13,6 +17,10 @@
   @include vp-1199 {
     margin-bottom: 39px;
     text-align: center;
+  }
+
+  @include vp-767 {
+    margin-bottom: 36px;
   }
 }
 

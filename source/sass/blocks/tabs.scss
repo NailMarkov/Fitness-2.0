@@ -11,6 +11,11 @@
     margin-bottom: 29px;
     width: 100%;
   }
+
+  @include vp-767 {
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
 }
 
 .tabs__link {
@@ -27,7 +32,15 @@
     width: 162px;
   }
 
-  &--active {
+  @include vp-767 {
+    margin-bottom: 7px;
+    padding: 14px 14px 15px;
+    width: 141px;
+    font-size: 16px;
+    line-height: 14px;
+  }
+
+  &.is-active {
     padding-bottom: 18px;
     background: $red-to-blue;
     color: $color-default-white;
