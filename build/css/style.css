@@ -2305,6 +2305,18 @@ button,
   right: -76px;
 }
 
+.contact {
+  padding: 56px 159px 70px 120px;
+}
+
+.contacts {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 calc(50% - 683px);
+}
+
 .custom-input,
 .custom-textarea {
   position: relative;
@@ -2484,6 +2496,20 @@ button,
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+.free-lesson {
+  padding: 55px 168px 70px 101px;
+  background-color: #102654;
+  color: #ffffff;
+}
+
+.free-lesson__title {
+  margin: 0;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 85px;
+  letter-spacing: 2.52px;
 }
 
 .games {
