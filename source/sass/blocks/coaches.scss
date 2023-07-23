@@ -26,3 +26,15 @@
 .coaches__wrapper {
   position: relative;
 }
+
+.coaches__button-prev {
+  position: absolute;
+  top: 118px;
+  left: -76px;
+}
+
+.coaches__button-next {
+  position: absolute;
+  top: 118px;
+  right: -76px;
+}

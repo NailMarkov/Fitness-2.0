@@ -301,7 +301,7 @@
         <section class="coaches">
           <h2 class="coaches__title subtitle subtitle--secondary">Тренеры</h2>
           <div class="coaches__wrapper">
-            <button class="btn btn--prev" type="button" data-prev>
+            <button class="coaches__button-prev btn btn--prev" type="button" data-prev>
               <span class="visually-hidden">Переключить слайд назад.</span>
               <svg
                 class="btn__icon"
@@ -558,7 +558,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn btn--next" type="button" data-next>
+            <button class="coaches__button-next btn btn--next" type="button" data-next>
               <span class="visually-hidden">Переключить слайд вперед.</span>
               <svg
                 class="btn__icon"
@@ -703,8 +703,8 @@
           </h2>
           <div class="faq__wrapper" data-tabs="parent">
             <div class="tabs" data-tabs="controls">
-              <a class="tabs__link is-active" href="#!" data-tabs="control">Центр</a>
-              <a class="tabs__link" href="#!" data-tabs="control">Абонемент</a>
+              <a class="tabs__link" href="#!" data-tabs="control">Центр</a>
+              <a class="tabs__link is-active" href="#!" data-tabs="control">Абонемент</a>
               <a class="tabs__link" href="#!" data-tabs="control">Услуги</a>
               <a class="tabs__link" href="#!" data-tabs="control">Правила</a>
             </div>
@@ -983,6 +983,41 @@
                 </li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        <!-- Section Reviews -->
+        <section class="reviews">
+          <h2 class="reviews__title subtitle subtitle--secondary">Отзывы</h2>
+          <div class="reviews__wrapper">
+            <button class="reviews__button-prev btn btn--prev" type="button" data-prev>
+              <span class="visually-hidden">Переключить слайд назад.</span>
+              <svg class="btn__icon" aria-hidden="true" focusable="false" width="18" height="34" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#arrow-prev" />
+              </svg>
+            </button>
+            <div class="swiper" data-slider>
+              <div class="swiper-wrapper">
+                <div class="swiper-slider review">
+                  <picture>
+                    <source type="image/webp" srcset="img/avatar-review.webp, img/avatar-review@2x.webp 2x"/>
+                    <img src="img/avatar-review.jpg" alt="Аватарка." srcset="img/avatar-review@2x.jpg" width="80" height="80">
+                  </picture>
+                  <h3 class="review__name">Анна Орлова</h3>
+                  <p class="review__text">
+                    «Хожу в Supergym уже больше года. Нравится, что в клубе
+                    всегда чисто, тренажеры обновляют, персонал дружелюбный.
+                    Зал просторный, даже в вечернее время нет очередей»
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button class="reviews__button-next btn btn--next" type="button" data-next>
+              <span class="visually-hidden">Переключить слайд вперед.</span>
+              <svg class="btn__icon" aria-hidden="true" focusable="false" width="18" height="34" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#arrow-next" />
+              </svg>
+            </button>
           </div>
         </section>
       </main>
