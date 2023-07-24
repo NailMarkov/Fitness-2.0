@@ -1,0 +1,58 @@
+.form__block {
+  display: grid;
+  grid-template-columns: repeat(2, 190px);
+  gap: 30px;
+  margin: 0 0 28px;
+  padding: 0;
+  border: 0;
+
+  @include vp-1199 {
+    grid-template-columns: repeat(2, 206px);
+    gap: 60px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 290px;
+    gap: 28px;
+    margin-bottom: 39px;
+  }
+}
+
+.form__control-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__control {
+  padding: 10px 0 5px;
+  background-color: inherit;
+  color: $color-default-white;
+  border: 0;
+  border-bottom: 1px solid #74819C;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+}
+
+.form__text-error {
+  display: none;
+}
+
+.form__button {
+  padding: 19px 19px 18px;
+  width: 100%;
+  font-size: 14px;
+  background-color: inherit;
+  color: $color-default-white;
+  letter-spacing: 0.7px;
+  border: 3px solid $color-default-white;
+
+  @include vp-1199 {
+    width: 474px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}

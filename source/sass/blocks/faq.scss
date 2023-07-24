@@ -1,9 +1,9 @@
 .faq {
-  padding: 120px $p-desktop;
+  padding: 120px $p-desktop 121px;
   background-color: $color-ghost-white;
 
   @include vp-1199 {
-    padding: 100px $p-tablet;
+    padding: 100px $p-tablet 103px;
   }
 
   @include vp-767 {

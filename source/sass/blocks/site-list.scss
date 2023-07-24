@@ -3,11 +3,12 @@
   grid-template-columns: repeat(5, auto);
   gap: 20px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 268px;
   list-style-type: none;
 
   @include vp-1199 {
-    gap: 30px;
+    gap: 10px;
+    margin-left: 55px;
   }
 
   @include vp-767 {
@@ -16,7 +17,10 @@
       ". link3"
       "link1 link4"
       "link2 link5";
-    margin-top: -30px;
+    gap: 16px 30px;
+    margin-top: -20px;
+    margin-left: 0;
+    margin-bottom: 34px;
     width: 290px;
   }
 }
@@ -48,4 +52,13 @@
 .site-list__link {
   display: block;
   padding: 5px 10px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+
+  @include vp-767 {
+    padding-left: 0;
+    font-size: 16px;
+    text-align: left;
+  }
 }
