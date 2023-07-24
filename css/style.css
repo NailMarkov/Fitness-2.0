@@ -2035,15 +2035,80 @@ button,
 }
 
 .contact {
-  padding: 56px 159px 70px 120px;
+  padding: 57px calc(100% - 524px) 63px 120px;
+  border-top: 1px solid #74819c;
+}
+
+.contact__title {
+  margin: 0 0 37px;
+}
+
+.contact__wrapper {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 170px 120px 110px;
+  grid-template-columns: 170px 110px;
+  -ms-grid-rows: auto 14px auto;
+  grid-template-areas: "address phone" "chart email";
+  gap: 14px 120px;
+  margin-left: 3px;
+}
+
+.contact__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 231px;
+  width: 1px;
+  height: 102px;
+  background-color: #74819c;
+}
+
+.contact__block--address {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: address;
+}
+
+.contact__block--chart {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: chart;
+}
+
+.contact__block--phone {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: phone;
+}
+
+.contact__block--email {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: email;
+}
+
+.contact__subtitle {
+  margin: 0 0 4px;
+}
+
+.contact__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.contact__link {
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .contacts {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0 calc(50% - 683px);
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .custom-input,
@@ -2158,7 +2223,7 @@ button,
 }
 
 .faq {
-  padding: 120px calc(50% - 580px);
+  padding: 120px calc(50% - 580px) 121px;
   background-color: #f8f9fc;
 }
 
@@ -2172,18 +2237,81 @@ button,
   display: flex;
 }
 
+.form__block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (190px)[2];
+  grid-template-columns: repeat(2, 190px);
+  gap: 30px;
+  margin: 0 0 28px;
+  padding: 0;
+  border: 0;
+}
+
+.form__control-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.form__control {
+  padding: 10px 0 5px;
+  background-color: inherit;
+  color: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #74819C;
+}
+
+.form__control::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+.form__control::-moz-placeholder {
+  color: #ffffff;
+}
+
+.form__control:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__control::-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form__control::placeholder {
+  color: #ffffff;
+}
+
+.form__text-error {
+  display: none;
+}
+
+.form__button {
+  padding: 19px 19px 18px;
+  width: 100%;
+  font-size: 14px;
+  background-color: inherit;
+  color: #ffffff;
+  letter-spacing: 0.7px;
+  border: 3px solid #ffffff;
+}
+
 .free-lesson {
-  padding: 55px 168px 70px 101px;
+  padding: 55px 169px 63px calc(100% - 581px);
   background-color: #102654;
   color: #ffffff;
 }
 
 .free-lesson__title {
-  margin: 0;
+  margin: 0 0 14px;
   font-weight: 800;
   font-size: 54px;
   line-height: 85px;
-  letter-spacing: 2.52px;
+  letter-spacing: 2.32px;
 }
 
 .games {
@@ -2552,9 +2680,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: top;
   -ms-flex-align: top;
   align-items: top;
@@ -2681,7 +2806,7 @@ button,
 }
 
 .reviews__title {
-  margin: 0 0 37px;
+  margin: 0 0 38px;
   text-align: center;
 }
 
@@ -2708,13 +2833,16 @@ button,
   grid-template-columns: repeat(5, auto);
   gap: 20px;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 268px;
   list-style-type: none;
 }
 
 .site-list__link {
   display: block;
   padding: 5px 10px;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
 }
 
 .social-list {
@@ -2723,7 +2851,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 0 0 -11px;
+  margin: 0 0 0 247px;
   padding: 0;
   list-style-type: none;
 }
@@ -3133,8 +3261,50 @@ button,
     text-align: center;
   }
 
+  .contact {
+    padding: 60px calc(50% - 251px) 64px;
+    border: 0;
+  }
+
+  .contact__title {
+    margin-bottom: 32px;
+  }
+
+  .contact__wrapper {
+    -ms-grid-columns: 218px 142px;
+    grid-template-columns: 218px 142px;
+    gap: 21px 96px;
+    margin-left: 0;
+  }
+
+  .contact__wrapper::before {
+    top: 8px;
+    left: 266px;
+    height: 129px;
+  }
+
+  .contact__subtitle {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contact__text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .contact__link {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .contacts {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
   .faq {
-    padding: 100px calc(50% - 339px);
+    padding: 100px calc(50% - 339px) 103px;
   }
 
   .faq__title {
@@ -3147,6 +3317,26 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .form__block {
+    -ms-grid-columns: (206px)[2];
+    grid-template-columns: repeat(2, 206px);
+    gap: 60px;
+  }
+
+  .form__button {
+    width: 474px;
+  }
+
+  .free-lesson {
+    padding: 45px calc(50% - 252px) 70px;
+  }
+
+  .free-lesson__title {
+    margin-bottom: 10px;
+    font-size: 42px;
+    letter-spacing: 1.5px;
   }
 
   .games {
@@ -3335,6 +3525,14 @@ button,
     padding: 45px calc(50% - 339px) 44px;
   }
 
+  .page-footer__link {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    width: 80px;
+    height: 19px;
+  }
+
   .page-header {
     padding: 40px calc(50% - 339px) 25px;
   }
@@ -3377,7 +3575,12 @@ button,
   }
 
   .site-list {
-    gap: 30px;
+    gap: 10px;
+    margin-left: 55px;
+  }
+
+  .social-list {
+    margin-left: 26px;
   }
 
   .sales {
@@ -3661,12 +3864,74 @@ button,
     margin-bottom: 49px;
   }
 
+  .contact {
+    padding: 70px calc(50% - 145px) 63px;
+  }
+
+  .contact__title {
+    margin-bottom: 40px;
+  }
+
+  .contact__wrapper {
+    -ms-grid-columns: 290px;
+    grid-template-columns: 290px;
+    -ms-grid-rows: auto 21px auto 21px auto 21px auto;
+    grid-template-areas: "address" "chart" "phone" "email";
+    gap: 21px;
+  }
+
+  .contact__wrapper::before {
+    display: none;
+  }
+
+  .contact__block--address {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .contact__block--chart {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .contact__block--phone {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .contact__block--email {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+
   .faq {
     padding: 77px calc(50% - 145px) 70px;
   }
 
   .faq__title {
     margin-bottom: 36px;
+  }
+
+  .form__block {
+    -ms-grid-columns: 290px;
+    grid-template-columns: 290px;
+    gap: 28px;
+    margin-bottom: 39px;
+  }
+
+  .form__button {
+    width: 100%;
+  }
+
+  .free-lesson {
+    padding: 40px calc(50% - 145px) 70px;
+  }
+
+  .free-lesson__title {
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 32px;
+    letter-spacing: 0.96px;
   }
 
   .games {
@@ -3816,6 +4081,13 @@ button,
     padding: 50px calc(50% - 145px);
   }
 
+  .page-footer__link {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    width: 68px;
+    height: 15px;
+  }
+
   .page-header {
     padding: 20px calc(50% - 145px) 15px;
   }
@@ -3869,7 +4141,7 @@ button,
   }
 
   .reviews {
-    padding: 66px calc(50% - 113px) 70px;
+    padding: 70px calc(50% - 113px) 70px;
   }
 
   .reviews__title {
@@ -3887,10 +4159,14 @@ button,
   }
 
   .site-list {
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: 1fr 30px 1fr;
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto 16px auto 16px auto;
     grid-template-areas: ". link3" "link1 link4" "link2 link5";
-    margin-top: -30px;
+    gap: 16px 30px;
+    margin-top: -20px;
+    margin-left: 0;
+    margin-bottom: 34px;
     width: 290px;
   }
 
@@ -3915,28 +4191,38 @@ button,
   }
 
   .site-list__item--item1 {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
 
   .site-list__item--item2 {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
   }
 
   .site-list__item--item3 {
     -ms-grid-row: 1;
-    -ms-grid-column: 2;
+    -ms-grid-column: 3;
   }
 
   .site-list__item--item4 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
   }
 
   .site-list__item--item5 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 2;
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+
+  .site-list__link {
+    padding-left: 0;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .social-list {
+    margin-left: -11px;
   }
 
   .sales {
