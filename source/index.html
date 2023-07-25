@@ -86,7 +86,6 @@
         </div>
         <div class="gym__video video" data-video>
           <div class="video__player" id="9TZXsZItgdw" data-youtube></div>
-
           <a class="video__control" href="https://youtube.com/embed/9TZXsZItgdw" data-control>
             <span class="visually-hidden">Проиграть видео.</span>
           </a>
@@ -98,58 +97,64 @@
         <h2 class="subscription__title subtitle subtitle--secondary">
           Абонементы
         </h2>
-        <ul class="period-list">
-          <li class="period-list__item">
-            <a class="period-list__link period-list__link--active" aria-current="page">1 месяц</a>
-          </li>
-          <li class="period-list__item">
-            <a class="period-list__link" href="#!">6 месяцев</a>
-          </li>
-          <li class="period-list__item">
-            <a class="period-list__link" href="#!">12 месяцев</a>
-          </li>
-        </ul>
-        <ul class="price-list">
-          <li class="price-list__item">
-            <div class="card">
-              <h3 class="card__title">С тренером</h3>
-              <p class="card__time">12 занятий</p>
-              <p class="card__price">
-                5000
-                <span class="card__price-bg">5000</span>
-              </p>
-              <button class="card__btn btn btn--bg-light" type="button">
-                купить абонемент
-              </button>
-            </div>
-          </li>
-          <li class="price-list__item">
-            <div class="card card--active">
-              <h3 class="card__title">Дневной</h3>
-              <p class="card__time">с 8:00 до 17:00</p>
-              <p class="card__price">
-                1700
-                <span class="card__price-bg">1700</span>
-              </p>
-              <button class="card__btn btn" type="button">
-                купить абонемент
-              </button>
-            </div>
-          </li>
-          <li class="price-list__item">
-            <div class="card">
-              <h3 class="card__title">Полный день</h3>
-              <p class="card__time">с 8:00 до 22:00</p>
-              <p class="card__price">
-                2700
-                <span class="card__price-bg">2700</span>
-              </p>
-              <button class="card__btn btn btn--bg-light" type="button">
-                купить абонемент
-              </button>
-            </div>
-          </li>
-        </ul>
+        <div class="subscription__wrapper" data-tabs="parent">
+          <div class="subscription__tabs" data-tabs="controls">
+            <ul class="period-list">
+              <li class="period-list__item">
+                <a class="period-list__link period-list__link--active" aria-current="page">1 месяц</a>
+              </li>
+              <li class="period-list__item">
+                <a class="period-list__link" href="#!">6 месяцев</a>
+              </li>
+              <li class="period-list__item">
+                <a class="period-list__link" href="#!">12 месяцев</a>
+              </li>
+            </ul>
+          </div>
+          <div class="subscription__content" data-tabs="content">
+            <ul class="price-list">
+              <li class="price-list__item">
+                <div class="card">
+                  <h3 class="card__title">С тренером</h3>
+                  <p class="card__time">12 занятий</p>
+                  <p class="card__price">
+                    5000
+                    <span class="card__price-bg">5000</span>
+                  </p>
+                  <button class="card__btn btn btn--bg-light" type="button">
+                    купить абонемент
+                  </button>
+                </div>
+              </li>
+              <li class="price-list__item">
+                <div class="card card--active">
+                  <h3 class="card__title">Дневной</h3>
+                  <p class="card__time">с 8:00 до 17:00</p>
+                  <p class="card__price">
+                    1700
+                    <span class="card__price-bg">1700</span>
+                  </p>
+                  <button class="card__btn btn" type="button">
+                    купить абонемент
+                  </button>
+                </div>
+              </li>
+              <li class="price-list__item">
+                <div class="card">
+                  <h3 class="card__title">Полный день</h3>
+                  <p class="card__time">с 8:00 до 22:00</p>
+                  <p class="card__price">
+                    2700
+                    <span class="card__price-bg">2700</span>
+                  </p>
+                  <button class="card__btn btn btn--bg-light" type="button">
+                    купить абонемент
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- Secion Games -->
@@ -861,18 +866,18 @@
 
       <!-- Section Contacts -->
       <section class="contacts">
-        <div class="free-lesson">
+        <div class="free-lesson" data-form-validate data-callback="base">
           <h2 class="free-lesson__title subtitle">Бесплатное занятие</h2>
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__block">
-              <div class="form__control-block">
+              <div class="form__control-block" data-validate-type="text" data-on-input-validate
+                data-message-base="Введите имя" data-message-extra="Запись не корректна" data-required>
                 <input class="form__control" type="text" aria-label="Имя" name="name" placeholder="Имя" required>
-                <span class="form__text-error">Введите имя</span>
               </div>
-              <div class="form__control-block">
+              <div class="form__control-block" data-validate-type="phone" data-on-input-validate
+                data-message-base="Введите телефон" data-message-extra="Запись не корректна" data-required>
                 <input class="form__control" type="tel" aria-label="Телефон" name="phone" placeholder="Телефон"
                   required>
-                <span class="form__text-error">Введите телефон</span>
               </div>
             </fieldset>
             <button class="form__button btn" type="submit">Отправить</button>

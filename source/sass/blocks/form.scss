@@ -21,6 +21,21 @@
 .form__control-block {
   display: flex;
   flex-direction: column;
+
+  .input-message {
+    font-size: 14px;
+    line-height: 22px;
+
+    &.is-invalid {
+      color: #ff121f;
+    }
+  }
+
+  &.is-invalid {
+    input {
+      border-bottom: 1px solid #ff121f;
+    }
+  }
 }
 
 .form__control {
@@ -33,10 +48,20 @@
   &::placeholder {
     color: $color-default-white;
   }
-}
 
-.form__text-error {
-  display: none;
+  @include hover {
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  @include active {
+    outline: none;
+    border: 1px solid $color-default-white;
+  }
+
+  @include focus {
+    outline: none;
+    border: 1px solid $color-default-white;
+  }
 }
 
 .form__button {

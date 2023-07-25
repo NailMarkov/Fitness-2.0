@@ -2690,6 +2690,16 @@ button,
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.form__control-block .input-message {
+  font-size: 14px;
+  line-height: 22px;
+}
+.form__control-block .input-message.is-invalid {
+  color: #ff121f;
+}
+.form__control-block.is-invalid input {
+  border-bottom: 1px solid #ff121f;
+}
 
 .form__control {
   padding: 10px 0 5px;
@@ -2713,9 +2723,18 @@ button,
 .form__control::placeholder {
   color: #ffffff;
 }
-
-.form__text-error {
-  display: none;
+@media (hover: hover) {
+  .form__control:hover:not(.focus-visible) {
+    border-bottom: 1px solid #ffffff;
+  }
+}
+.form__control.focus-visible:active {
+  outline: none;
+  border: 1px solid #ffffff;
+}
+.form__control.focus-visible:focus {
+  outline: none;
+  border: 1px solid #ffffff;
 }
 
 .form__button {
