@@ -2258,6 +2258,19 @@ button,
   flex-direction: column;
 }
 
+.form__control-block .input-message {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.form__control-block .input-message.is-invalid {
+  color: #ff121f;
+}
+
+.form__control-block.is-invalid input {
+  border-bottom: 1px solid #ff121f;
+}
+
 .form__control {
   padding: 10px 0 5px;
   background-color: inherit;
@@ -2286,8 +2299,14 @@ button,
   color: #ffffff;
 }
 
-.form__text-error {
-  display: none;
+.form__control.focus-visible:active {
+  outline: none;
+  border: 1px solid #ffffff;
+}
+
+.form__control.focus-visible:focus {
+  outline: none;
+  border: 1px solid #ffffff;
 }
 
 .form__button {
@@ -4350,6 +4369,10 @@ button,
 
   .btn--next:hover:not(.focus-visible) {
     border: 1px solid #102654;
+  }
+
+  .form__control:hover:not(.focus-visible) {
+    border-bottom: 1px solid #ffffff;
   }
 
   .hit-sales__link:hover:not(.focus-visible) {

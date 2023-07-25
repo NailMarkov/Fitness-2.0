@@ -86,7 +86,6 @@
         </div>
         <div class="gym__video video" data-video>
           <div class="video__player" id="9TZXsZItgdw" data-youtube></div>
-
           <a class="video__control" href="https://youtube.com/embed/9TZXsZItgdw" data-control>
             <span class="visually-hidden">Проиграть видео.</span>
           </a>
@@ -98,58 +97,64 @@
         <h2 class="subscription__title subtitle subtitle--secondary">
           Абонементы
         </h2>
-        <ul class="period-list">
-          <li class="period-list__item">
-            <a class="period-list__link period-list__link--active" aria-current="page">1 месяц</a>
-          </li>
-          <li class="period-list__item">
-            <a class="period-list__link" href="#!">6 месяцев</a>
-          </li>
-          <li class="period-list__item">
-            <a class="period-list__link" href="#!">12 месяцев</a>
-          </li>
-        </ul>
-        <ul class="price-list">
-          <li class="price-list__item">
-            <div class="card">
-              <h3 class="card__title">С тренером</h3>
-              <p class="card__time">12 занятий</p>
-              <p class="card__price">
-                5000
-                <span class="card__price-bg">5000</span>
-              </p>
-              <button class="card__btn btn btn--bg-light" type="button">
-                купить абонемент
-              </button>
-            </div>
-          </li>
-          <li class="price-list__item">
-            <div class="card card--active">
-              <h3 class="card__title">Дневной</h3>
-              <p class="card__time">с 8:00 до 17:00</p>
-              <p class="card__price">
-                1700
-                <span class="card__price-bg">1700</span>
-              </p>
-              <button class="card__btn btn" type="button">
-                купить абонемент
-              </button>
-            </div>
-          </li>
-          <li class="price-list__item">
-            <div class="card">
-              <h3 class="card__title">Полный день</h3>
-              <p class="card__time">с 8:00 до 22:00</p>
-              <p class="card__price">
-                2700
-                <span class="card__price-bg">2700</span>
-              </p>
-              <button class="card__btn btn btn--bg-light" type="button">
-                купить абонемент
-              </button>
-            </div>
-          </li>
-        </ul>
+        <div class="subscription__wrapper" data-tabs="parent">
+          <div class="subscription__tabs" data-tabs="controls">
+            <ul class="period-list">
+              <li class="period-list__item">
+                <a class="period-list__link period-list__link--active" aria-current="page">1 месяц</a>
+              </li>
+              <li class="period-list__item">
+                <a class="period-list__link" href="#!">6 месяцев</a>
+              </li>
+              <li class="period-list__item">
+                <a class="period-list__link" href="#!">12 месяцев</a>
+              </li>
+            </ul>
+          </div>
+          <div class="subscription__content" data-tabs="content">
+            <ul class="price-list">
+              <li class="price-list__item">
+                <div class="card">
+                  <h3 class="card__title">С тренером</h3>
+                  <p class="card__time">12 занятий</p>
+                  <p class="card__price">
+                    5000
+                    <span class="card__price-bg">5000</span>
+                  </p>
+                  <button class="card__btn btn btn--bg-light" type="button">
+                    купить абонемент
+                  </button>
+                </div>
+              </li>
+              <li class="price-list__item">
+                <div class="card card--active">
+                  <h3 class="card__title">Дневной</h3>
+                  <p class="card__time">с 8:00 до 17:00</p>
+                  <p class="card__price">
+                    1700
+                    <span class="card__price-bg">1700</span>
+                  </p>
+                  <button class="card__btn btn" type="button">
+                    купить абонемент
+                  </button>
+                </div>
+              </li>
+              <li class="price-list__item">
+                <div class="card">
+                  <h3 class="card__title">Полный день</h3>
+                  <p class="card__time">с 8:00 до 22:00</p>
+                  <p class="card__price">
+                    2700
+                    <span class="card__price-bg">2700</span>
+                  </p>
+                  <button class="card__btn btn btn--bg-light" type="button">
+                    купить абонемент
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- Secion Games -->
@@ -208,14 +213,14 @@
       <section class="coaches">
         <h2 class="coaches__title subtitle subtitle--secondary">Тренеры</h2>
         <div class="coaches__wrapper">
-          <button class="coaches__button-prev btn btn--prev" type="button" data-prev>
+          <button class="coaches__button-prev btn btn--prev" type="button" data-prev="coaches">
             <span class="visually-hidden">Переключить слайд назад.</span>
             <svg class="btn__icon" aria-hidden="true" focusable="false" width="18" height="34"
               xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#arrow-prev" />
             </svg>
           </button>
-          <div class="swiper" data-slider>
+          <div class="swiper" data-slider="coaches">
             <div class="swiper-wrapper">
               <div class="swiper-slide coach">
                 <picture>
@@ -395,7 +400,7 @@
               </div>
             </div>
           </div>
-          <button class="coaches__button-next btn btn--next" type="button" data-next>
+          <button class="coaches__button-next btn btn--next" type="button" data-next="coaches">
             <span class="visually-hidden">Переключить слайд вперед.</span>
             <svg class="btn__icon" aria-hidden="true" focusable="false" width="18" height="34"
               xmlns="http://www.w3.org/2000/svg">
@@ -825,16 +830,68 @@
       <section class="reviews">
         <h2 class="reviews__title subtitle subtitle--secondary">Отзывы</h2>
         <div class="reviews__wrapper">
-          <button class="reviews__button-prev btn btn--prev" type="button" data-prev>
+          <button class="reviews__button-prev btn btn--prev" type="button" data-prev="reviews">
             <span class="visually-hidden">Переключить слайд назад.</span>
             <svg class="btn__icon" aria-hidden="true" focusable="false" width="18" height="34"
               xmlns="http://www.w3.org/2000/svg">
               <use xlink:href="img/sprite.svg#arrow-prev" />
             </svg>
           </button>
-          <div class="swiper" data-slider>
+          <div class="swiper" data-slider="reviews">
             <div class="swiper-wrapper">
-              <div class="swiper-slider review">
+              <div class="swiper-slide review">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-review.webp, img/avatar-review@2x.webp 2x" />
+                  <img src="img/avatar-review.jpg" alt="Аватарка." srcset="img/avatar-review@2x.jpg" width="80"
+                    height="80">
+                </picture>
+                <h3 class="review__name">Анна Орлова</h3>
+                <p class="review__text">
+                  «Хожу в Supergym уже больше года. Нравится, что в клубе
+                  всегда чисто, тренажеры обновляют, персонал дружелюбный.
+                  Зал просторный, даже в вечернее время нет очередей»
+                </p>
+              </div>
+              <div class="swiper-slide review">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-review.webp, img/avatar-review@2x.webp 2x" />
+                  <img src="img/avatar-review.jpg" alt="Аватарка." srcset="img/avatar-review@2x.jpg" width="80"
+                    height="80">
+                </picture>
+                <h3 class="review__name">Анна Орлова</h3>
+                <p class="review__text">
+                  «Хожу в Supergym уже больше года. Нравится, что в клубе
+                  всегда чисто, тренажеры обновляют, персонал дружелюбный.
+                  Зал просторный, даже в вечернее время нет очередей»
+                </p>
+              </div>
+              <div class="swiper-slide review">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-review.webp, img/avatar-review@2x.webp 2x" />
+                  <img src="img/avatar-review.jpg" alt="Аватарка." srcset="img/avatar-review@2x.jpg" width="80"
+                    height="80">
+                </picture>
+                <h3 class="review__name">Анна Орлова</h3>
+                <p class="review__text">
+                  «Хожу в Supergym уже больше года. Нравится, что в клубе
+                  всегда чисто, тренажеры обновляют, персонал дружелюбный.
+                  Зал просторный, даже в вечернее время нет очередей»
+                </p>
+              </div>
+              <div class="swiper-slide review">
+                <picture>
+                  <source type="image/webp" srcset="img/avatar-review.webp, img/avatar-review@2x.webp 2x" />
+                  <img src="img/avatar-review.jpg" alt="Аватарка." srcset="img/avatar-review@2x.jpg" width="80"
+                    height="80">
+                </picture>
+                <h3 class="review__name">Анна Орлова</h3>
+                <p class="review__text">
+                  «Хожу в Supergym уже больше года. Нравится, что в клубе
+                  всегда чисто, тренажеры обновляют, персонал дружелюбный.
+                  Зал просторный, даже в вечернее время нет очередей»
+                </p>
+              </div>
+              <div class="swiper-slide review">
                 <picture>
                   <source type="image/webp" srcset="img/avatar-review.webp, img/avatar-review@2x.webp 2x" />
                   <img src="img/avatar-review.jpg" alt="Аватарка." srcset="img/avatar-review@2x.jpg" width="80"
@@ -849,7 +906,7 @@
               </div>
             </div>
           </div>
-          <button class="reviews__button-next btn btn--next" type="button" data-next>
+          <button class="reviews__button-next btn btn--next" type="button" data-next="reviews">
             <span class="visually-hidden">Переключить слайд вперед.</span>
             <svg class="btn__icon" aria-hidden="true" focusable="false" width="18" height="34"
               xmlns="http://www.w3.org/2000/svg">
@@ -861,18 +918,18 @@
 
       <!-- Section Contacts -->
       <section class="contacts">
-        <div class="free-lesson">
+        <div class="free-lesson" data-form-validate data-callback="base">
           <h2 class="free-lesson__title subtitle">Бесплатное занятие</h2>
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__block">
-              <div class="form__control-block">
+              <div class="form__control-block" data-validate-type="text" data-on-input-validate
+                data-message-base="Введите имя" data-message-extra="Запись не корректна" data-required>
                 <input class="form__control" type="text" aria-label="Имя" name="name" placeholder="Имя" required>
-                <span class="form__text-error">Введите имя</span>
               </div>
-              <div class="form__control-block">
+              <div class="form__control-block" data-validate-type="phone" data-on-input-validate
+                data-message-base="Введите телефон" data-message-extra="Запись не корректна" data-required>
                 <input class="form__control" type="tel" aria-label="Телефон" name="phone" placeholder="Телефон"
                   required>
-                <span class="form__text-error">Введите телефон</span>
               </div>
             </fieldset>
             <button class="form__button btn" type="submit">Отправить</button>
