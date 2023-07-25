@@ -1,9 +1,9 @@
-export const initSlider = () => {
-  const slider = document.querySelector('[data-slider]');
-  const swiper = new window.Swiper(slider, {
+export const initSliderCoaches = () => {
+  const sliderCoaches = document.querySelector('[data-slider="coaches"]');
+  const swiper = new window.Swiper(sliderCoaches, {
     navigation: {
-      prevEl: document.querySelector('[data-prev]'),
-      nextEl: document.querySelector('[data-next]'),
+      prevEl: document.querySelector('[data-prev="coaches"]'),
+      nextEl: document.querySelector('[data-next="coaches"]'),
     },
     breakpoints: {
       320: {
@@ -24,3 +24,16 @@ export const initSlider = () => {
 
   return swiper;
 };
+
+export const initSliderReviews = () => {
+  const sliderReviews = document.querySelector('[data-slider="reviews"]');
+  const swiperReviews = new window.Swiper(sliderReviews, {
+    navigation: {
+      prevEl: document.querySelector('[data-prev="reviews"]'),
+      nextEl: document.querySelector('[data-next="reviews"]'),
+    },
+  });
+
+  return swiperReviews;
+};
+

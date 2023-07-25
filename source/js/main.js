@@ -2,8 +2,8 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initVideos} from './modules/video';
-import {initSlider} from './modules/slider';
-import {initTabs} from './modules/tabs';
+import {initSliderCoaches, initSliderReviews} from './modules/slider';
+import {initTabs} from './vendor/init-tabs';
 import {initAccordions} from './vendor/init-accordion';
 
 // ---------------------------------
@@ -19,7 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   initAccordions();
   initVideos();
-  initSlider();
+  initSliderCoaches();
+  initSliderReviews();
   initTabs();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
