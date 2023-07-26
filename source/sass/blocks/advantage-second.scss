@@ -12,15 +12,15 @@
     justify-self: center;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
-    margin: 0 0 8px 8px;
-    padding: 45px 135px 39px;
+    margin: 0 0 9px 8px;
+    padding: 45px 135px 38px;
     width: 442px;
   }
 
   @include vp-767 {
     grid-row: 3 / 4;
-    margin: 8px 0 5px 0;
-    padding: 50px 74px 45px;
+    margin: 9px 0 5px;
+    padding: 50px 74px 43px;
     width: 320px;
   }
 }
@@ -28,19 +28,19 @@
 .advantage-second__numbers {
   display: flex;
   flex-direction: column;
-  margin: 0 0 31px;
+  margin: 0 0 33px;
 
   @include vp-1199 {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   @include vp-767 {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 }
 
 .advantage-second__figure {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-weight: 700;
   font-size: 71px;
   line-height: 49px;
