@@ -2558,6 +2558,11 @@ button,
   min-height: 462px;
 }
 
+.hit-sales img {
+  background-color: #003d85;
+  color: #ffffff;
+}
+
 .hit-sales__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3491,6 +3496,10 @@ button,
     object-fit: cover;
   }
 
+  .hit-sales__info {
+    width: 279px;
+  }
+
   .nav {
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -4065,16 +4074,21 @@ button,
   }
 
   .other-sales {
-    padding: 39px 42px 44px;
+    padding: 40px 42px 43px;
     text-align: center;
   }
 
   .other-sales__description {
     margin-bottom: 29px;
+    padding: 0 12px;
   }
 
   .other-sales__link {
     margin: 0 auto;
+  }
+
+  .other-sales__link::after {
+    bottom: -4px;
   }
 
   .page-footer {
