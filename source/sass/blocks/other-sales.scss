@@ -8,7 +8,7 @@
   border-image-slice: 1;
 
   @include vp-767 {
-    padding: 39px 42px 44px;
+    padding: 40px 42px 43px;
     text-align: center;
   }
 }
@@ -39,6 +39,7 @@
 
   @include vp-767 {
     margin-bottom: 29px;
+    padding: 0 12px;
   }
 }
 
@@ -64,6 +65,10 @@
     right: 0;
     height: 1px;
     background-color: #1c3374;
+
+    @include vp-767 {
+      bottom: -4px;
+    }
   }
 
   @include hover {

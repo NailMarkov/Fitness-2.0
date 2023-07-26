@@ -3348,6 +3348,10 @@ button,
   }
 }
 
+.hit-sales img {
+  background-color: #003d85;
+  color: #ffffff;
+}
 @media (max-width: 1199px) {
   .hit-sales img {
     width: 399px;
@@ -3375,6 +3379,11 @@ button,
   width: 280px;
   background-color: #ed0233;
   color: #ffffff;
+}
+@media (max-width: 1199px) {
+  .hit-sales__info {
+    width: 279px;
+  }
 }
 @media (max-width: 767px) {
   .hit-sales__info {
@@ -3546,7 +3555,7 @@ button,
 }
 @media (max-width: 767px) {
   .other-sales {
-    padding: 39px 42px 44px;
+    padding: 40px 42px 43px;
     text-align: center;
   }
 }
@@ -3577,6 +3586,7 @@ button,
 @media (max-width: 767px) {
   .other-sales__description {
     margin-bottom: 29px;
+    padding: 0 12px;
   }
 }
 
@@ -3603,6 +3613,11 @@ button,
   right: 0;
   height: 1px;
   background-color: #1c3374;
+}
+@media (max-width: 767px) {
+  .other-sales__link::after {
+    bottom: -4px;
+  }
 }
 @media (hover: hover) {
   .other-sales__link:hover:not(.focus-visible) {
