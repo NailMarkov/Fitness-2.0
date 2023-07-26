@@ -1649,12 +1649,12 @@ button,
 .advantage {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 31px auto;
+  -ms-grid-columns: auto 30px auto;
   grid-template-columns: repeat(2, auto);
   -ms-grid-rows: auto 5px auto;
   grid-template-areas: "num titl" "num des";
   height: 71px;
-  gap: 5px 31px;
+  gap: 5px 30px;
 }
 
 .advantage__numbers {
@@ -1724,11 +1724,11 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0 0 31px;
+  margin: 0 0 33px;
 }
 
 .advantage-second__figure {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   font-weight: 700;
   font-size: 71px;
   line-height: 49px;
@@ -1768,7 +1768,7 @@ button,
 .advanteges__wrapper::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 160px;
   right: -18px;
   width: 340px;
   height: 2px;
@@ -1778,7 +1778,7 @@ button,
 .advanteges__wrapper::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 160px;
   left: -18px;
   width: 340px;
   height: 2px;
@@ -3171,13 +3171,13 @@ button,
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
-    margin: 0 0 8px 8px;
-    padding: 45px 135px 39px;
+    margin: 0 0 9px 8px;
+    padding: 45px 135px 38px;
     width: 442px;
   }
 
   .advantage-second__numbers {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   .advantage-second__figure {
@@ -3197,7 +3197,7 @@ button,
   .advanteges__wrapper {
     -ms-grid-columns: 300px 314px;
     grid-template-columns: 300px 314px;
-    gap: 42px 55px;
+    gap: 41px 55px;
   }
 
   .advanteges__wrapper::after {
@@ -3749,13 +3749,13 @@ button,
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3/4;
-    margin: 8px 0 5px 0;
-    padding: 50px 74px 45px;
+    margin: 9px 0 5px;
+    padding: 50px 74px 43px;
     width: 320px;
   }
 
   .advantage-second__numbers {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 
   .advantage-second__figure {
