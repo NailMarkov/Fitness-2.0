@@ -1,33 +1,35 @@
 .card {
-  padding: 68px 77px;
+  padding: 69px 76px 67px;
   background-color: $color-default-white;
 
   @include vp-1199 {
-    padding: 68px 118px;
+    padding: 69px 117px 67px;
   }
 
   @include vp-767 {
-    padding: 55px 42px;
+    padding: 50px 41px 54px;
   }
 
-  &--active {
-    padding: 61px 70px;
+  @include hover {
+    padding: 62px 70px 61px;
     border: 7px solid transparent;
     border-image: $red-to-blue;
     border-image-slice: 1;
 
     .card__btn {
+      padding: 27px 42px 26px 43px;
+      width: 100%;
       border: none;
       color: $color-default-white;
       background-image: $red-to-blue;
     }
 
     @include vp-1199 {
-      padding: 61px 111px;
+      padding: 62px 111px 61px;
     }
 
     @include vp-767 {
-      padding: 48px 35px;
+      padding: 44px 35px 48px;
     }
   }
 }
@@ -57,7 +59,7 @@
 .card__price {
   position: relative;
   margin: 0;
-  padding: 36px 50px 5px 20px;
+  padding: 36px 50px 4px 21px;
   font-weight: 700;
   font-size: 60px;
   line-height: 150px;
@@ -65,7 +67,7 @@
   z-index: 1;
 
   @include vp-767 {
-    padding: 55px 50px 31px 39px;
+    padding: 56px 50px 30px 38px;
     font-size: 48px;
     line-height: 72px;
   }
@@ -74,7 +76,7 @@
     content: "";
     position: absolute;
     top: 90px;
-    right: 20px;
+    right: 21px;
     width: 30px;
     height: 42px;
     background-image: url("../../img/svg/rubles.svg");
@@ -82,9 +84,13 @@
     background-repeat: no-repeat;
     background-size: 30px 42px;
 
+    @include vp-1199 {
+      right: 20px;
+    }
+
     @include vp-767 {
-      top: 75px;
-      right: 35px;
+      top: 76px;
+      right: 38px;
       width: 24px;
       height: 33px;
       background-size: 24px 33px;
@@ -111,5 +117,6 @@
 }
 
 .card__btn {
-  padding: 24px 42px;
+  padding: 25px 42px;
+  width: 100%;
 }

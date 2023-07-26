@@ -1994,39 +1994,43 @@ button,
 }
 
 .card {
-  padding: 68px 77px;
+  padding: 69px 76px 67px;
   background-color: #ffffff;
 }
 @media (max-width: 1199px) {
   .card {
-    padding: 68px 118px;
+    padding: 69px 117px 67px;
   }
 }
 @media (max-width: 767px) {
   .card {
-    padding: 55px 42px;
+    padding: 50px 41px 54px;
   }
 }
-.card--active {
-  padding: 61px 70px;
-  border: 7px solid transparent;
-  -o-border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
-     border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
-  border-image-slice: 1;
-}
-.card--active .card__btn {
-  border: none;
-  color: #ffffff;
-  background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
-}
-@media (max-width: 1199px) {
-  .card--active {
-    padding: 61px 111px;
+@media (hover: hover) {
+  .card:hover:not(.focus-visible) {
+    padding: 62px 70px 61px;
+    border: 7px solid transparent;
+    -o-border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+       border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+    border-image-slice: 1;
+  }
+  .card:hover:not(.focus-visible) .card__btn {
+    padding: 27px 42px 26px 43px;
+    width: 100%;
+    border: none;
+    color: #ffffff;
+    background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   }
 }
-@media (max-width: 767px) {
-  .card--active {
-    padding: 48px 35px;
+@media (hover: hover) and (max-width: 1199px) {
+  .card:hover:not(.focus-visible) {
+    padding: 62px 111px 61px;
+  }
+}
+@media (hover: hover) and (max-width: 767px) {
+  .card:hover:not(.focus-visible) {
+    padding: 44px 35px 48px;
   }
 }
 
@@ -2056,7 +2060,7 @@ button,
 .card__price {
   position: relative;
   margin: 0;
-  padding: 36px 50px 5px 20px;
+  padding: 36px 50px 4px 21px;
   font-weight: 700;
   font-size: 60px;
   line-height: 150px;
@@ -2065,7 +2069,7 @@ button,
 }
 @media (max-width: 767px) {
   .card__price {
-    padding: 55px 50px 31px 39px;
+    padding: 56px 50px 30px 38px;
     font-size: 48px;
     line-height: 72px;
   }
@@ -2074,7 +2078,7 @@ button,
   content: "";
   position: absolute;
   top: 90px;
-  right: 20px;
+  right: 21px;
   width: 30px;
   height: 42px;
   background-image: url("../../img/svg/rubles.svg");
@@ -2082,10 +2086,15 @@ button,
   background-repeat: no-repeat;
   background-size: 30px 42px;
 }
+@media (max-width: 1199px) {
+  .card__price::after {
+    right: 20px;
+  }
+}
 @media (max-width: 767px) {
   .card__price::after {
-    top: 75px;
-    right: 35px;
+    top: 76px;
+    right: 38px;
     width: 24px;
     height: 33px;
     background-size: 24px 33px;
@@ -2112,7 +2121,8 @@ button,
 }
 
 .card__btn {
-  padding: 24px 42px;
+  padding: 25px 42px;
+  width: 100%;
 }
 
 .coach {
@@ -3606,7 +3616,7 @@ button,
   -ms-grid-columns: (auto)[3];
   grid-template-columns: repeat(3, auto);
   gap: 46px;
-  margin: 0 auto 39px;
+  margin: 0 auto 38px;
   padding: 0;
   width: 342px;
   list-style-type: none;
@@ -3614,14 +3624,14 @@ button,
 @media (max-width: 1199px) {
   .period-list {
     gap: 54px;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
     width: 332px;
   }
 }
 @media (max-width: 767px) {
   .period-list {
     gap: 45px;
-    margin-bottom: 30px;
+    margin-bottom: 34px;
     width: 290px;
   }
 }
@@ -3662,10 +3672,10 @@ button,
     line-height: 24px;
   }
 }
-.period-list__link--active {
+.period-list__link.is-active {
   color: #102654;
 }
-.period-list__link--active::after {
+.period-list__link.is-active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -3685,7 +3695,7 @@ button,
   margin: 0;
   padding: 0;
   list-style-type: none;
-  z-index: 1;
+  z-index: 3;
 }
 @media (max-width: 1199px) {
   .price-list {
@@ -3693,12 +3703,12 @@ button,
     grid-template-columns: none;
     -ms-grid-rows: (1fr)[3];
     grid-template-rows: repeat(3, 1fr);
-    gap: 41px;
+    gap: 40px;
   }
 }
 @media (max-width: 767px) {
   .price-list {
-    gap: 31px;
+    gap: 34px;
   }
 }
 
@@ -4077,6 +4087,16 @@ button,
   }
 }
 
+.subscription__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .subtitle {
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
@@ -4211,96 +4231,6 @@ button,
   background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   color: #ffffff;
   border: 0;
-}
-
-.tabs__controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  margin-bottom: 40px;
-}
-@media screen and (max-width: 767px) {
-  .tabs__controls {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-.tabs__control {
-  text-transform: uppercase;
-  cursor: pointer;
-  margin: 0 20px;
-  opacity: 0.5;
-  min-width: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 25%;
-}
-@media screen and (max-width: 1023px) {
-  .tabs__control {
-    margin: 0 10px;
-    padding: 15px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .tabs__control {
-    margin: 10px 2% 0;
-    padding: 10px;
-    width: 45%;
-  }
-}
-.tabs__control.is-active {
-  opacity: 1;
-  pointer-events: none;
-}
-
-.tabs__content {
-  margin-bottom: 40px;
-  -webkit-transition: height 0.3s;
-  transition: height 0.3s;
-}
-
-.tabs__element {
-  padding: 25px;
-  width: 100%;
-}
-@media screen and (max-width: 767px) {
-  .tabs__element {
-    padding: 15px;
-  }
-}
-.tabs__element p {
-  margin: 0;
-}
-.tabs__element p:not(:last-child) {
-  margin: 0 0 20px 0;
-}
-.tabs__element:nth-child(1) {
-  background-color: rgb(250, 235, 215);
-}
-.tabs__element:nth-child(2) {
-  background-color: rgb(229, 250, 215);
-}
-.tabs__element:nth-child(3) {
-  background-color: rgb(180, 188, 233);
-}
-.tabs__element:nth-child(4) {
-  background-color: rgb(255, 187, 204);
-}
-
-.tabs--unset .tabs__content {
-  height: 100px;
-}
-
-.tabs--unset .tabs__element {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .video__player {
