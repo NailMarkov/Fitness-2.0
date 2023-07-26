@@ -1484,23 +1484,23 @@ button,
 }
 @media (max-width: 767px) {
   .accordion__item {
-    padding: 20px 0;
+    padding: 20px 0 19px;
   }
 }
 .accordion__item:first-child {
   border-top: 1px solid rgba(28, 51, 116, 0.2);
 }
 .accordion__item.is-active .accordion__problem {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 @media (max-width: 1199px) {
   .accordion__item.is-active .accordion__problem {
-    margin-bottom: 7px;
+    margin-bottom: 9px;
   }
 }
 @media (max-width: 767px) {
   .accordion__item.is-active .accordion__problem {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
   }
 }
 .accordion__item.is-active .accordion__button {
@@ -1564,6 +1564,19 @@ button,
     height: 32px;
   }
 }
+@media (hover: hover) {
+  .accordion__button:hover:not(.focus-visible) {
+    background-color: #102654;
+    cursor: pointer;
+  }
+}
+.accordion__button.focus-visible:focus {
+  background-color: #102654;
+  cursor: pointer;
+}
+.accordion__button:disabled {
+  opacity: 0.3;
+}
 
 .accordion__icon-minus {
   position: absolute;
@@ -1595,6 +1608,14 @@ button,
     height: 12px;
     color: #102654;
   }
+}
+@media (hover: hover) {
+  .accordion__icon-plus:hover:not(.focus-visible) {
+    color: #ffffff;
+  }
+}
+.accordion__icon-plus.focus-visible:focus {
+  color: #ffffff;
 }
 
 .accordion__answer {
@@ -2650,7 +2671,7 @@ button,
 }
 @media (max-width: 1199px) {
   .faq {
-    padding: 100px calc(50% - 339px) 103px;
+    padding: 100px calc(50% - 339px);
   }
 }
 @media (max-width: 767px) {
