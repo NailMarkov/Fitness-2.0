@@ -2002,7 +2002,7 @@ button,
 }
 
 .coaches__title {
-  margin: 0 0 49px;
+  margin: 0 0 49px 2px;
 }
 
 .coaches__wrapper {
@@ -2011,13 +2011,13 @@ button,
 
 .coaches__button-prev {
   position: absolute;
-  top: 118px;
+  top: 119px;
   left: -76px;
 }
 
 .coaches__button-next {
   position: absolute;
-  top: 118px;
+  top: 119px;
   right: -76px;
 }
 
@@ -3252,6 +3252,7 @@ button,
 
   .coaches__title {
     margin-bottom: 30px;
+    margin-left: 0;
     text-align: center;
   }
 
@@ -3827,8 +3828,12 @@ button,
     height: 274px;
   }
 
+  .coach img {
+    height: 274px;
+  }
+
   .coach__info {
-    padding: 41px 33px 10px 40px;
+    padding: 41px 33px 30px 40px;
   }
 
   .coach__title {
@@ -3848,11 +3853,21 @@ button,
   }
 
   .coaches {
-    padding: 39px calc(50% - 113px) 70px;
+    padding: 40px calc(50% - 113px) 70px;
   }
 
   .coaches__title {
-    margin-bottom: 49px;
+    margin-bottom: 48px;
+  }
+
+  .coaches__button-prev {
+    top: 122px;
+    left: -43px;
+  }
+
+  .coaches__button-next {
+    top: 122px;
+    right: -43px;
   }
 
   .contact {
