@@ -1576,7 +1576,7 @@ button,
 }
 
 .accordion__item.is-active .accordion__problem {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .accordion__item.is-active .accordion__button {
@@ -1623,6 +1623,15 @@ button,
   border-radius: 50%;
 }
 
+.accordion__button.focus-visible:focus {
+  background-color: #102654;
+  cursor: pointer;
+}
+
+.accordion__button:disabled {
+  opacity: 0.3;
+}
+
 .accordion__icon-minus {
   position: absolute;
   top: 9px;
@@ -1636,6 +1645,10 @@ button,
   left: 9px;
   display: block;
   color: #102654;
+}
+
+.accordion__icon-plus.focus-visible:focus {
+  color: #ffffff;
 }
 
 .accordion__answer {
@@ -3148,7 +3161,7 @@ button,
   }
 
   .accordion__item.is-active .accordion__problem {
-    margin-bottom: 7px;
+    margin-bottom: 9px;
   }
 
   .accordion__answer {
@@ -3304,7 +3317,7 @@ button,
   }
 
   .faq {
-    padding: 100px calc(50% - 339px) 103px;
+    padding: 100px calc(50% - 339px);
   }
 
   .faq__title {
@@ -3670,11 +3683,11 @@ button,
   }
 
   .accordion__item {
-    padding: 20px 0;
+    padding: 20px 0 19px;
   }
 
   .accordion__item.is-active .accordion__problem {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
   }
 
   .accordion__problem {
@@ -4362,6 +4375,15 @@ button,
 }
 
 @media (hover: hover) {
+  .accordion__button:hover:not(.focus-visible) {
+    background-color: #102654;
+    cursor: pointer;
+  }
+
+  .accordion__icon-plus:hover:not(.focus-visible) {
+    color: #ffffff;
+  }
+
   .btn--prev:hover:not(.focus-visible) {
     border: 1px solid #102654;
   }
