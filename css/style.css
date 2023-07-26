@@ -2494,7 +2494,7 @@ button,
 }
 
 .hero__text {
-  margin: 0 12px 0 0;
+  margin: 0 11px 0 0;
   padding: 305px 0 50px;
   width: 132px;
   line-height: 21px;
@@ -2502,8 +2502,8 @@ button,
 }
 
 .hero__block {
-  margin-right: 64px;
-  width: 252px;
+  margin-right: 63px;
+  width: 254px;
   text-align: right;
 }
 
@@ -2519,9 +2519,33 @@ button,
   -webkit-text-stroke: 3px #ffffff;
 }
 
-.hero__btn {
-  margin-left: auto;
-  padding: 21px 54px 20px 55px;
+.hero__link {
+  display: block;
+  padding: 21px 35px 18px;
+  margin-left: 20px;
+  width: 234px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 4px solid #ffffff;
+}
+
+.hero__link.focus-visible:focus {
+  background-color: #ffffff;
+  color: #103aae;
+  outline: none;
+}
+
+.hero__link:active {
+  background-color: #ffffff;
+  color: #102654;
+}
+
+.hero__link:disabled {
+  opacity: 0.5;
 }
 
 .hit-sales {
@@ -3431,7 +3455,7 @@ button,
   }
 
   .hero__block {
-    margin-right: 27px;
+    margin-right: 28px;
     width: 202px;
   }
 
@@ -3444,8 +3468,10 @@ button,
     text-transform: lowercase;
   }
 
-  .hero__btn {
-    padding: 21px 32px 20px;
+  .hero__link {
+    margin-left: 15px;
+    padding: 21px 25px 18px;
+    width: 187px;
   }
 
   .hero__image {
@@ -3972,10 +3998,11 @@ button,
     letter-spacing: 3.6px;
   }
 
-  .hero__btn {
+  .hero__link {
+    margin-left: 0;
     padding-top: 22px;
-    padding-bottom: 21px;
-    width: 290px;
+    padding-bottom: 19px;
+    width: 292px;
   }
 
   .hero__image {
@@ -4332,6 +4359,11 @@ button,
 
   .form__control:hover:not(.focus-visible) {
     border-bottom: 1px solid #ffffff;
+  }
+
+  .hero__link:hover:not(.focus-visible) {
+    background-color: #ffffff;
+    color: #103aae;
   }
 
   .hit-sales__link:hover:not(.focus-visible) {
