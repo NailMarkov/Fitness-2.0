@@ -3,6 +3,15 @@
   padding: 120px $p-desktop;
   background-color: $color-ghost-white;
 
+
+  @include vp-1199 {
+    padding: 100px calc(50% - 221px);
+  }
+
+  @include vp-767 {
+    padding: 70px $p-mobile;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -25,14 +34,6 @@
     @include vp-767 {
       content: none;
     }
-  }
-
-  @include vp-1199 {
-    padding: 100px calc(50% - 221px);
-  }
-
-  @include vp-767 {
-    padding: 70px $p-mobile;
   }
 }
 
