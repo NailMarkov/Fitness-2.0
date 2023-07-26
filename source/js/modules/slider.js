@@ -1,6 +1,7 @@
 export const initSliderCoaches = () => {
   const sliderCoaches = document.querySelector('[data-slider="coaches"]');
-  const swiper = new window.Swiper(sliderCoaches, {
+  const swiperCoaches = new window.Swiper(sliderCoaches, {
+    loop: true,
     navigation: {
       prevEl: document.querySelector('[data-prev="coaches"]'),
       nextEl: document.querySelector('[data-next="coaches"]'),
@@ -22,7 +23,7 @@ export const initSliderCoaches = () => {
     },
   });
 
-  return swiper;
+  return swiperCoaches;
 };
 
 export const initSliderReviews = () => {

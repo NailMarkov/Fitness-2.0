@@ -6,20 +6,21 @@
   }
 
   @include vp-767 {
-    padding: 39px calc(50% - 113px) 70px;
+    padding: 40px calc(50% - 113px) 70px;
   }
 }
 
 .coaches__title {
-  margin: 0 0 49px;
+  margin: 0 0 49px 2px;
 
   @include vp-1199 {
     margin-bottom: 30px;
+    margin-left: 0;
     text-align: center;
   }
 
   @include vp-767 {
-    margin-bottom: 49px;
+    margin-bottom: 48px;
   }
 }
 
@@ -29,12 +30,22 @@
 
 .coaches__button-prev {
   position: absolute;
-  top: 118px;
+  top: 119px;
   left: -76px;
+
+  @include vp-767 {
+    top: 122px;
+    left: -43px;
+  }
 }
 
 .coaches__button-next {
   position: absolute;
-  top: 118px;
+  top: 119px;
   right: -76px;
+
+  @include vp-767 {
+    top: 122px;
+    right: -43px;
+  }
 }

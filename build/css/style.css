@@ -2157,6 +2157,11 @@ button,
   -o-object-fit: cover;
      object-fit: cover;
 }
+@media (max-width: 767px) {
+  .coach img {
+    height: 274px;
+  }
+}
 
 .coach__name {
   position: absolute;
@@ -2190,7 +2195,7 @@ button,
 }
 @media (max-width: 767px) {
   .coach__info {
-    padding: 41px 33px 10px 40px;
+    padding: 41px 33px 30px 40px;
   }
 }
 
@@ -2285,22 +2290,23 @@ button,
 }
 @media (max-width: 767px) {
   .coaches {
-    padding: 39px calc(50% - 113px) 70px;
+    padding: 40px calc(50% - 113px) 70px;
   }
 }
 
 .coaches__title {
-  margin: 0 0 49px;
+  margin: 0 0 49px 2px;
 }
 @media (max-width: 1199px) {
   .coaches__title {
     margin-bottom: 30px;
+    margin-left: 0;
     text-align: center;
   }
 }
 @media (max-width: 767px) {
   .coaches__title {
-    margin-bottom: 49px;
+    margin-bottom: 48px;
   }
 }
 
@@ -2310,14 +2316,26 @@ button,
 
 .coaches__button-prev {
   position: absolute;
-  top: 118px;
+  top: 119px;
   left: -76px;
+}
+@media (max-width: 767px) {
+  .coaches__button-prev {
+    top: 122px;
+    left: -43px;
+  }
 }
 
 .coaches__button-next {
   position: absolute;
-  top: 118px;
+  top: 119px;
   right: -76px;
+}
+@media (max-width: 767px) {
+  .coaches__button-next {
+    top: 122px;
+    right: -43px;
+  }
 }
 
 .contact {

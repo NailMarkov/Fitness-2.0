@@ -23,6 +23,10 @@
 
 .coach img {
   object-fit: cover;
+
+  @include vp-767 {
+    height: 274px;
+  }
 }
 
 .coach__name {
@@ -54,7 +58,7 @@
   }
 
   @include vp-767 {
-    padding: 41px 33px 10px 40px;
+    padding: 41px 33px 30px 40px;
   }
 }
 
