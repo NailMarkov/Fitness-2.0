@@ -51,8 +51,9 @@
     color: $color-default-white;
   }
 
-  &:disabled {
-    opacity: 0.3;
+  &[aria-disabled="true"] {
+    opacity: 0.4;
+    pointer-events: none;
   }
 }
 

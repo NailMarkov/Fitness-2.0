@@ -1,0 +1,8 @@
+.input-message {
+  font-size: 14px;
+  line-height: 22px;
+
+  &.is-invalid {
+    color: #ff121f;
+  }
+}

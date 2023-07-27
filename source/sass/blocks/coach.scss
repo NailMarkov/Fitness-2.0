@@ -52,6 +52,7 @@
   display: none;
   padding: 52px 46px 39px;
   background-color: rgba(16, 38, 84, 0.89);
+  filter: drop-shadow(0 0 40px rgba(28, 51, 116, 0.2));
 
   @include vp-1199 {
     padding: 51px 46px 50px 55px;

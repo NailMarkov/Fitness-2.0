@@ -46,4 +46,15 @@
     color: $color-default-white;
     border: 0;
   }
+
+  @include focus {
+    border: 1px solid $color-sapphire;
+    outline: none;
+  }
+
+  &[aria-disabled="true"] {
+    color: #c8c9cc;
+    border: 1px solid rgba(16, 38, 84, 0.2);
+    pointer-events: none;
+  }
 }

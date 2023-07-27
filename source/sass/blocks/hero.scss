@@ -130,8 +130,9 @@
     color: $color-sapphire;
   }
 
-  &:disabled {
-    opacity: 0.5;
+  &[aria-disabled="true"] {
+    opacity: 0.4;
+    pointer-events: none;
   }
 }
 

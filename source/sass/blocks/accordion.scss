@@ -39,14 +39,14 @@
 
     .accordion__button {
       background-color: $color-sapphire;
+    }
 
-      &.accordion__icon-minus {
-        display: block;
-      }
+    .accordion__icon-minus {
+      display: block;
+    }
 
-      &.accordion__icon-plus {
-        display: none;
-      }
+    .accordion__icon-plus {
+      display: none;
     }
   }
 }
@@ -103,6 +103,7 @@
 
   &:disabled {
     opacity: 0.3;
+    pointer-events: none;
   }
 }
 

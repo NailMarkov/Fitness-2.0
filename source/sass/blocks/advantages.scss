@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-.advanteges__wrapper {
+.advantages__wrapper {
   position: relative;
   display: grid;
   grid-template-columns: 321px 240px 335px;
@@ -32,11 +32,11 @@
     gap: 37px;
   }
 
-  &::after {
+  &::after,
+  &::before {
     content: "";
     position: absolute;
     top: 160px;
-    right: -18px;
     width: 340px;
     height: 2px;
     background-color: rgba(209, 10, 66, 0.2);
@@ -46,17 +46,11 @@
     }
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 160px;
-    left: -18px;
-    width: 340px;
-    height: 2px;
-    background-color: rgba(209, 10, 66, 0.2);
+  &::after {
+    right: -18px;
+  }
 
-    @include vp-1199 {
-      content: none;
-    }
+  &::before {
+    left: -18px;
   }
 }

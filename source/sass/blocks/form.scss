@@ -22,45 +22,36 @@
   display: flex;
   flex-direction: column;
 
-  .input-message {
-    font-size: 14px;
-    line-height: 22px;
-
-    &.is-invalid {
-      color: #ff121f;
-    }
-  }
-
   &.is-invalid {
     input {
       border-bottom: 1px solid #ff121f;
     }
   }
-}
 
-.form__control {
-  padding: 10px 0 5px;
-  background-color: inherit;
-  color: $color-default-white;
-  border: 0;
-  border-bottom: 1px solid #74819c;
-
-  &::placeholder {
+  input {
+    padding: 10px 0 5px;
+    background-color: inherit;
     color: $color-default-white;
-  }
+    border: 0;
+    border-bottom: 1px solid #74819c;
 
-  @include hover {
-    border-bottom: 1px solid $color-default-white;
-  }
+    &::placeholder {
+      color: $color-default-white;
+    }
 
-  @include active {
-    outline: none;
-    border: 1px solid $color-default-white;
-  }
+    @include hover {
+      border-bottom: 1px solid $color-default-white;
+    }
 
-  @include focus {
-    outline: none;
-    border: 1px solid $color-default-white;
+    @include active {
+      outline: none;
+      border: 1px solid $color-default-white;
+    }
+
+    @include focus {
+      outline: none;
+      border: 1px solid $color-default-white;
+    }
   }
 }
 

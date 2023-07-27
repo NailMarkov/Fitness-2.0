@@ -168,6 +168,27 @@
     letter-spacing: 0.5px;
     border-width: 2px;
   }
+
+  @include hover {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+  }
+
+  @include focus {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+  }
+
+  &[aria-disabled="true"] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
 }
 
 .games__game-picture {
