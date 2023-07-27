@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   margin: 0 0 0 247px;
   padding: 0;
+  color: #030a1a;
   list-style-type: none;
 
   @include vp-1199 {
@@ -32,6 +33,26 @@
 
   &--reddit {
     padding: 6px 6px 6px 5px;
+  }
+
+  @include hover {
+    background-color: $color-egyptian-blue;
+    color: $color-default-white;
+  }
+
+  @include focus {
+    background-color: $color-egyptian-blue;
+    color: $color-default-white;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-sapphire;
+    color: $color-default-white;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 }
 

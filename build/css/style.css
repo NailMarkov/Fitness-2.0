@@ -2360,7 +2360,7 @@ button,
 }
 
 .contact {
-  padding: 57px calc(100% - 524px) 63px 120px;
+  padding: 57px calc(100% - 524px) 60px 120px;
   border-top: 1px solid #74819c;
 }
 @media (max-width: 1199px) {
@@ -2371,7 +2371,7 @@ button,
 }
 @media (max-width: 767px) {
   .contact {
-    padding: 70px calc(50% - 145px) 63px;
+    padding: 70px calc(50% - 145px) 64px;
   }
 }
 
@@ -2731,7 +2731,7 @@ button,
     -ms-grid-columns: 290px;
     grid-template-columns: 290px;
     gap: 28px;
-    margin-bottom: 39px;
+    margin-bottom: 36px;
   }
 }
 
@@ -2810,6 +2810,20 @@ button,
     width: 100%;
   }
 }
+@media (hover: hover) {
+  .form__button:hover:not(.focus-visible) {
+    background-color: #ffffff;
+    color: #102654;
+  }
+}
+.form__button.focus-visible:focus {
+  background-color: #ffffff;
+  color: #102654;
+}
+.form__button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
 
 .free-lesson {
   padding: 55px 169px 63px calc(100% - 581px);
@@ -2818,17 +2832,17 @@ button,
 }
 @media (max-width: 1199px) {
   .free-lesson {
-    padding: 45px calc(50% - 252px) 70px;
+    padding: 45px calc(50% - 252px) 68px;
   }
 }
 @media (max-width: 767px) {
   .free-lesson {
-    padding: 40px calc(50% - 145px) 70px;
+    padding: 40px calc(50% - 145px) 69px;
   }
 }
 
 .free-lesson__title {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   font-weight: 800;
   font-size: 54px;
   line-height: 85px;
@@ -3919,7 +3933,7 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews {
-    padding: 92px calc(50% - 283px) 100px;
+    padding: 91px calc(50% - 283px) 100px;
   }
 }
 @media (max-width: 767px) {
@@ -3934,12 +3948,12 @@ button,
 }
 @media (max-width: 1199px) {
   .reviews__title {
-    margin-bottom: 40px;
+    margin-bottom: 39px;
   }
 }
 @media (max-width: 767px) {
   .reviews__title {
-    margin-bottom: 49px;
+    margin-bottom: 48px;
   }
 }
 
@@ -4043,6 +4057,7 @@ button,
 }
 
 .site-list__link {
+  position: relative;
   display: block;
   padding: 5px 10px;
   font-size: 14px;
@@ -4056,6 +4071,29 @@ button,
     text-align: left;
   }
 }
+.site-list__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  height: 1px;
+  background-color: #ffffff;
+}
+@media (hover: hover) {
+  .site-list__link:hover:not(.focus-visible)::after {
+    display: block;
+  }
+}
+.site-list__link.focus-visible:focus {
+  padding: 4px 9px;
+  border: 1px solid #ffffff;
+  outline: none;
+}
+.site-list__link:disabled {
+  opacity: 0.4;
+}
 
 .social-list {
   display: -webkit-box;
@@ -4065,6 +4103,7 @@ button,
       flex-wrap: wrap;
   margin: 0 0 0 247px;
   padding: 0;
+  color: #030a1a;
   list-style-type: none;
 }
 @media (max-width: 1199px) {
@@ -4094,6 +4133,24 @@ button,
 }
 .social-list__link--reddit {
   padding: 6px 6px 6px 5px;
+}
+@media (hover: hover) {
+  .social-list__link:hover:not(.focus-visible) {
+    background-color: #103aae;
+    color: #ffffff;
+  }
+}
+.social-list__link.focus-visible:focus {
+  background-color: #103aae;
+  color: #ffffff;
+  outline: none;
+}
+.social-list__link:active {
+  background-color: #102654;
+  color: #ffffff;
+}
+.social-list__link:disabled {
+  opacity: 0.3;
 }
 
 .social-list__icon {
