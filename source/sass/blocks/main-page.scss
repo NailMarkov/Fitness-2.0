@@ -4,6 +4,7 @@
     padding: 51px $p-desktop;
     min-height: 658px;
     color: $color-default-white;
+
     @include conic-gradient(130.31deg, calc(50% - 465px) 257px);
   }
 }

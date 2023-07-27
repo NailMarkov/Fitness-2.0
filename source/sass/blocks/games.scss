@@ -175,8 +175,8 @@
   background-color: $color-dark-cerulean;
 
   @include vp-1199 {
-  width: 386px;
-  height: 282px;
+    width: 386px;
+    height: 282px;
   }
 
   @include vp-767 {

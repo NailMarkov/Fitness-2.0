@@ -14,9 +14,9 @@
   @include vp-767 {
     grid-template-columns: auto;
     grid-template-areas:
-    "num"
-    "titl"
-    "des";
+      "num"
+      "titl"
+      "des";
     gap: 12px;
     padding: 0 46px;
     height: 155px;
