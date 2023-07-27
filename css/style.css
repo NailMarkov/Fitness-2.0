@@ -1298,7 +1298,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Alumni Sans";
-  src: url("../../fonts/alumini-sans/AlumniSans-SemiBold.woff2") format("woff2"), url("../../fonts/alumini-sans/AlumniSans-SemiBold.woff") format("woff");
+  src: url("../fonts/alumini-sans/AlumniSans-SemiBold.woff2") format("woff2"), url("../fonts/alumini-sans/AlumniSans-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -1306,7 +1306,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/roboto-condensed/RobotoCondensed-Bold.woff2") format("woff2"), url("../../fonts/roboto-condensed/RobotoCondensed-Bold.woff") format("woff");
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Bold.woff2") format("woff2"), url("../fonts/roboto-condensed/RobotoCondensed-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -1314,7 +1314,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/roboto-condensed/RobotoCondensed-Light.woff2") format("woff2"), url("../../fonts/roboto-condensed/RobotoCondensed-Light.woff") format("woff");
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Light.woff2") format("woff2"), url("../fonts/roboto-condensed/RobotoCondensed-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -1322,7 +1322,7 @@ button.swiper-pagination-bullet {
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../../fonts/roboto-condensed/RobotoCondensed-Regular.woff2") format("woff2"), url("../../fonts/roboto-condensed/RobotoCondensed-Regular.woff") format("woff");
+  src: url("../fonts/roboto-condensed/RobotoCondensed-Regular.woff2") format("woff2"), url("../fonts/roboto-condensed/RobotoCondensed-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -1540,11 +1540,11 @@ button,
   background-color: #102654;
 }
 
-.accordion__item.is-active .accordion__button.accordion__icon-minus {
+.accordion__item.is-active .accordion__icon-minus {
   display: block;
 }
 
-.accordion__item.is-active .accordion__button.accordion__icon-plus {
+.accordion__item.is-active .accordion__icon-plus {
   display: none;
 }
 
@@ -1586,6 +1586,7 @@ button,
 
 .accordion__button:disabled {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .accordion__icon-minus {
@@ -1725,7 +1726,7 @@ button,
   text-align: center;
 }
 
-.advanteges__wrapper {
+.advantages__wrapper {
   position: relative;
   display: -ms-grid;
   display: grid;
@@ -1734,24 +1735,22 @@ button,
   gap: 159px 60px;
 }
 
-.advanteges__wrapper::after {
+.advantages__wrapper::after,
+.advantages__wrapper::before {
   content: "";
   position: absolute;
   top: 160px;
-  right: -18px;
   width: 340px;
   height: 2px;
   background-color: rgba(209, 10, 66, 0.2);
 }
 
-.advanteges__wrapper::before {
-  content: "";
-  position: absolute;
-  top: 160px;
+.advantages__wrapper::after {
+  right: -18px;
+}
+
+.advantages__wrapper::before {
   left: -18px;
-  width: 340px;
-  height: 2px;
-  background-color: rgba(209, 10, 66, 0.2);
 }
 
 .btn {
@@ -1863,7 +1862,7 @@ button,
   right: 21px;
   width: 30px;
   height: 42px;
-  background-image: url("../../img/svg/rubles.svg");
+  background-image: url("../img/svg/rubles.svg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 30px 42px;
@@ -1924,6 +1923,8 @@ button,
   display: none;
   padding: 52px 46px 39px;
   background-color: rgba(16, 38, 84, 0.89);
+  -webkit-filter: drop-shadow(0 0 40px rgba(28, 51, 116, 0.2));
+  filter: drop-shadow(0 0 40px rgba(28, 51, 116, 0.2));
 }
 
 .coach__title {
@@ -2214,20 +2215,11 @@ button,
   flex-direction: column;
 }
 
-.form__control-block .input-message {
-  font-size: 14px;
-  line-height: 22px;
-}
-
-.form__control-block .input-message.is-invalid {
-  color: #ff121f;
-}
-
 .form__control-block.is-invalid input {
   border-bottom: 1px solid #ff121f;
 }
 
-.form__control {
+.form__control-block input {
   padding: 10px 0 5px;
   background-color: inherit;
   color: #ffffff;
@@ -2235,32 +2227,32 @@ button,
   border-bottom: 1px solid #74819c;
 }
 
-.form__control::-webkit-input-placeholder {
+.form__control-block input::-webkit-input-placeholder {
   color: #ffffff;
 }
 
-.form__control::-moz-placeholder {
+.form__control-block input::-moz-placeholder {
   color: #ffffff;
 }
 
-.form__control:-ms-input-placeholder {
+.form__control-block input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.form__control::-ms-input-placeholder {
+.form__control-block input::-ms-input-placeholder {
   color: #ffffff;
 }
 
-.form__control::placeholder {
+.form__control-block input::placeholder {
   color: #ffffff;
 }
 
-.form__control.focus-visible:active {
+.form__control-block input.focus-visible:active {
   outline: none;
   border: 1px solid #ffffff;
 }
 
-.form__control.focus-visible:focus {
+.form__control-block input.focus-visible:focus {
   outline: none;
   border: 1px solid #ffffff;
 }
@@ -2406,6 +2398,22 @@ button,
   color: inherit;
 }
 
+.games__button.focus-visible:focus {
+  background-color: #ffffff;
+  color: #103aae;
+  outline: none;
+}
+
+.games__button:active {
+  background-color: #ffffff;
+  color: #102654;
+}
+
+.games__button[aria-disabled=true] {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 .games__game-picture {
   height: 292px;
   background-color: #003d85;
@@ -2447,17 +2455,7 @@ button,
   margin-top: -113px;
   width: 364px;
   height: 228px;
-  background-image: url("../img/poster.jpg");
-}
-
-.gym__video::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(20, 54, 122, 0.5);
+  background-image: url("../img/poster-desktop.jpg");
 }
 
 .hero {
@@ -2523,8 +2521,9 @@ button,
   color: #102654;
 }
 
-.hero__link:disabled {
-  opacity: 0.5;
+.hero__link[aria-disabled=true] {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .hit-sales {
@@ -2601,8 +2600,18 @@ button,
   outline: 1px solid #ffffff;
 }
 
-.hit-sales__link:disabled {
+.hit-sales__link[aria-disabled=true] {
   opacity: 0.3;
+  pointer-events: none;
+}
+
+.input-message {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.input-message.is-invalid {
+  color: #ff121f;
 }
 
 .main-page--error {
@@ -2710,8 +2719,9 @@ button,
   outline: 1px solid #102654;
 }
 
-.other-sales__link:disabled {
+.other-sales__link[aria-disabled=true] {
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .page-footer {
@@ -2780,6 +2790,25 @@ button,
   bottom: 0;
   height: 2px;
   background-color: #d10a42;
+}
+
+.period-list__link.focus-visible:focus {
+  color: #102654;
+  outline: none;
+}
+
+.period-list__link.focus-visible:focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #d10a42;
+}
+
+.period-list__link[aria-disabled=true] {
+  opacity: 0.3;
 }
 
 .price-list {
@@ -2904,8 +2933,9 @@ button,
   outline: none;
 }
 
-.site-list__link:disabled {
+.site-list__link[aria-disabled=true] {
   opacity: 0.4;
+  pointer-events: none;
 }
 
 .social-list {
@@ -2952,8 +2982,9 @@ button,
   color: #ffffff;
 }
 
-.social-list__link:disabled {
-  opacity: 0.3;
+.social-list__link[aria-disabled=true] {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .social-list__icon {
@@ -3069,6 +3100,17 @@ button,
   background: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   color: #ffffff;
   border: 0;
+}
+
+.tabs__link.focus-visible:focus {
+  border: 1px solid #102654;
+  outline: none;
+}
+
+.tabs__link[aria-disabled=true] {
+  color: #c8c9cc;
+  border: 1px solid rgba(16, 38, 84, 0.2);
+  pointer-events: none;
 }
 
 .video__player {
@@ -3212,17 +3254,14 @@ button,
     padding: 91px calc(50% - 339px);
   }
 
-  .advanteges__wrapper {
+  .advantages__wrapper {
     -ms-grid-columns: 300px 314px;
     grid-template-columns: 300px 314px;
     gap: 41px 55px;
   }
 
-  .advanteges__wrapper::after {
-    content: none;
-  }
-
-  .advanteges__wrapper::before {
+  .advantages__wrapper::after,
+  .advantages__wrapper::before {
     content: none;
   }
 
@@ -3513,6 +3552,10 @@ button,
     width: 279px;
   }
 
+  .main-page--error {
+    padding: 51px calc(50% - 339px);
+  }
+
   .nav {
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -3784,7 +3827,7 @@ button,
     padding: 70px calc(50% - 160px) 65px;
   }
 
-  .advanteges__wrapper {
+  .advantages__wrapper {
     -ms-grid-columns: 320px;
     grid-template-columns: 320px;
     gap: 37px;
@@ -4070,6 +4113,15 @@ button,
 
   .hit-sales__link {
     margin: 0 auto;
+  }
+
+  .main-page--error {
+    padding: 51px calc(50% - 145px);
+  }
+
+  .main-page__title-error {
+    padding: 65px;
+    font-size: 27px;
   }
 
   .nav__link {
@@ -4404,13 +4456,18 @@ button,
     background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
   }
 
-  .form__control:hover:not(.focus-visible) {
+  .form__control-block input:hover:not(.focus-visible) {
     border-bottom: 1px solid #ffffff;
   }
 
   .form__button:hover:not(.focus-visible) {
     background-color: #ffffff;
     color: #102654;
+  }
+
+  .games__button:hover:not(.focus-visible) {
+    background-color: #ffffff;
+    color: #103aae;
   }
 
   .hero__link:hover:not(.focus-visible) {
