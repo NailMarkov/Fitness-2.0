@@ -7,7 +7,7 @@
   }
 
   @include vp-767 {
-    padding: 70px calc(50% - 160px) 65px;
+    padding: 70px 0 65px;
   }
 }
 
@@ -28,7 +28,7 @@
   }
 
   @include vp-767 {
-    grid-template-columns: 320px;
+    grid-template-columns: 1fr;
     gap: 37px;
   }
 

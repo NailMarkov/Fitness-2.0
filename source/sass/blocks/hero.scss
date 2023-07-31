@@ -9,7 +9,7 @@
   @include conic-gradient(130.31deg, calc(50% - 465px) 257px);
 
   @include vp-1199 {
-    padding: 82px $p-tablet;
+    padding: 82px 45px;
     margin-top: -83px;
     min-height: 554px;
 
@@ -18,7 +18,7 @@
 
   @include vp-767 {
     margin-top: -62px;
-    padding: 65px $p-mobile 78px;
+    padding: 65px 15px 78px;
     min-height: 491px;
 
     @include conic-gradient(171.43deg, 113px 168px);
@@ -56,7 +56,7 @@
 
   @include vp-767 {
     margin-right: 0;
-    width: 290px;
+    width: 100%;
   }
 }
 
@@ -83,6 +83,7 @@
   @include vp-767 {
     margin-bottom: 23px;
     padding: 0;
+    min-height: 137px;
     font-size: 72px;
     letter-spacing: 3.6px;
   }
@@ -111,7 +112,7 @@
     margin-left: 0;
     padding-top: 22px;
     padding-bottom: 19px;
-    width: 292px;
+    width: 100%;
   }
 
   @include hover {

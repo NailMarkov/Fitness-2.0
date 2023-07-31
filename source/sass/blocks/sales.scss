@@ -2,11 +2,11 @@
   padding: 135px $p-desktop 120px;
 
   @include vp-1199 {
-    padding: 91px $p-tablet 100px;
+    padding: 91px 45px 100px;
   }
 
   @include vp-767 {
-    padding: 70px $p-mobile;
+    padding: 70px 15px 71px;
   }
 }
 

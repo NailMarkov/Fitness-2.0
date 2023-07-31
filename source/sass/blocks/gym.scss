@@ -9,7 +9,7 @@
   }
 
   @include vp-767 {
-    padding: 70px calc(50% - 160px);
+    padding: 70px 0;
   }
 }
 
@@ -28,7 +28,7 @@
   @include vp-767 {
     margin-bottom: 26px;
     padding: 0 15px;
-    width: 320px;
+    width: 100%;
   }
 }
 
@@ -75,7 +75,7 @@
 
   @include vp-767 {
     margin-bottom: 40px;
-    width: 320px;
+    width: 100%;
   }
 }
 
@@ -97,7 +97,7 @@
 
   @include vp-767 {
     margin: 0;
-    width: 320px;
+    width: 100%;
     background-image: url("../img/poster-mobile.jpg");
   }
 }
