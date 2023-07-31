@@ -3501,7 +3501,7 @@ button,
   }
 
   .hero {
-    padding: 82px calc(50% - 339px);
+    padding: 82px 45px;
     margin-top: -83px;
     min-height: 554px;
     background-image: conic-gradient(from 139.4deg at 160px 198px, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
@@ -3542,8 +3542,8 @@ button,
   }
 
   .hit-sales img {
-    width: 399px;
-    height: 462px;
+    width: 100%;
+    height: auto;
     -o-object-fit: cover;
     object-fit: cover;
   }
@@ -3596,7 +3596,7 @@ button,
   }
 
   .page-header {
-    padding: 40px calc(50% - 339px) 25px;
+    padding: 40px 45px 25px;
   }
 
   .period-list {
@@ -3646,7 +3646,7 @@ button,
   }
 
   .sales {
-    padding: 91px calc(50% - 339px) 100px;
+    padding: 91px 45px 100px;
   }
 
   .sales__title {
@@ -3824,12 +3824,12 @@ button,
   }
 
   .advantages {
-    padding: 70px calc(50% - 160px) 65px;
+    padding: 70px 0 65px;
   }
 
   .advantages__wrapper {
-    -ms-grid-columns: 320px;
-    grid-template-columns: 320px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     gap: 37px;
   }
 
@@ -3932,7 +3932,7 @@ button,
   }
 
   .contact {
-    padding: 70px calc(50% - 145px) 64px;
+    padding: 70px 15px 64px;
   }
 
   .contact__title {
@@ -3972,7 +3972,7 @@ button,
   }
 
   .faq {
-    padding: 77px calc(50% - 145px) 70px;
+    padding: 77px 15px 70px;
   }
 
   .faq__title {
@@ -3991,7 +3991,7 @@ button,
   }
 
   .free-lesson {
-    padding: 40px calc(50% - 145px) 69px;
+    padding: 40px 15px 69px;
   }
 
   .free-lesson__title {
@@ -4006,7 +4006,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 70px calc(50% - 145px) 30px;
+    padding: 70px 15px 30px;
   }
 
   .games__event-block {
@@ -4014,18 +4014,18 @@ button,
   }
 
   .games__game-picture {
-    width: 290px;
-    height: 292px;
+    width: 100%;
+    height: auto;
   }
 
   .gym {
-    padding: 70px calc(50% - 160px);
+    padding: 70px 0;
   }
 
   .gym__block {
     margin-bottom: 26px;
     padding: 0 15px;
-    width: 320px;
+    width: 100%;
   }
 
   .gym__text {
@@ -4040,18 +4040,18 @@ button,
 
   .gym__image {
     margin-bottom: 40px;
-    width: 320px;
+    width: 100%;
   }
 
   .gym__video {
     margin: 0;
-    width: 320px;
+    width: 100%;
     background-image: url("../img/poster-mobile.jpg");
   }
 
   .hero {
     margin-top: -62px;
-    padding: 65px calc(50% - 145px) 78px;
+    padding: 65px 15px 78px;
     min-height: 491px;
     background-image: conic-gradient(from 171.43deg at 113px 168px, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
@@ -4064,12 +4064,13 @@ button,
 
   .hero__block {
     margin-right: 0;
-    width: 290px;
+    width: 100%;
   }
 
   .hero__title {
     margin-bottom: 23px;
     padding: 0;
+    min-height: 137px;
     font-size: 72px;
     letter-spacing: 3.6px;
   }
@@ -4078,7 +4079,7 @@ button,
     margin-left: 0;
     padding-top: 22px;
     padding-bottom: 19px;
-    width: 292px;
+    width: 100%;
   }
 
   .hero__image {
@@ -4093,8 +4094,8 @@ button,
   }
 
   .hit-sales img {
-    width: 290px;
-    height: 299px;
+    width: 100%;
+    height: auto;
   }
 
   .hit-sales__info {
@@ -4160,7 +4161,7 @@ button,
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    padding: 50px calc(50% - 145px);
+    padding: 50px 15px;
   }
 
   .page-footer__link {
@@ -4171,7 +4172,7 @@ button,
   }
 
   .page-header {
-    padding: 20px calc(50% - 145px) 15px;
+    padding: 20px 15px 15px;
   }
 
   .period-list {
@@ -4225,7 +4226,7 @@ button,
   }
 
   .reviews {
-    padding: 70px calc(50% - 113px) 70px;
+    padding: 70px 47px 70px;
   }
 
   .reviews__title {
@@ -4310,7 +4311,7 @@ button,
   }
 
   .sales {
-    padding: 70px calc(50% - 145px);
+    padding: 70px 15px 71px;
   }
 
   .sales__title {
@@ -4357,15 +4358,17 @@ button,
   }
 
   .tabs {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7px;
   }
 
   .tabs__link {
-    margin-bottom: 7px;
+    margin-bottom: 0;
     padding: 14px 14px 15px;
-    width: 141px;
+    width: 100%;
     font-size: 16px;
     line-height: 14px;
   }
