@@ -3465,7 +3465,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 55px calc(50% - 339px) 100px;
+    padding: 55px 45px 100px;
   }
 
   .gym__block {
@@ -3489,7 +3489,7 @@ button,
   }
 
   .gym__image {
-    width: 678px;
+    width: 100%;
   }
 
   .gym__video {
@@ -3730,7 +3730,7 @@ button,
   }
 
   .accordion__problem {
-    gap: 25px;
+    gap: 9px;
   }
 
   .accordion__title {
@@ -3780,6 +3780,10 @@ button,
 
   .advantage__figure {
     line-height: 53px;
+    background: linear-gradient(176deg, #d10a42 0, #0041ca 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .advantage__title {
