@@ -1349,6 +1349,7 @@ html {
   line-height: 24px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #102654;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -1526,6 +1527,7 @@ button,
 .accordion__item {
   padding: 25px 0 24px;
   border-bottom: 1px solid rgba(28, 51, 116, 0.2);
+  cursor: pointer;
 }
 
 .accordion__item:first-child {
@@ -1537,15 +1539,7 @@ button,
 }
 
 .accordion__item.is-active .accordion__button {
-  background-color: #102654;
-}
-
-.accordion__item.is-active .accordion__icon-minus {
-  display: block;
-}
-
-.accordion__item.is-active .accordion__icon-plus {
-  display: none;
+  background-image: url("../img/svg/faq-btn-close.svg");
 }
 
 .accordion__problem {
@@ -1575,37 +1569,25 @@ button,
   width: 42px;
   height: 42px;
   background-color: inherit;
-  border: 1px solid #102654;
+  background-image: url("../img/svg/faq-btn-open.svg");
+  background-size: 42px 42px;
+  border: none;
   border-radius: 50%;
-}
-
-.accordion__button.focus-visible:focus {
-  background-color: #102654;
   cursor: pointer;
 }
 
+.accordion__button:hover,
+.accordion__button:focus {
+  background-image: url("../img/svg/faq-btn-interface.svg");
+  outline: none;
+}
+
+.accordion__button:active {
+  background-image: url("../img/svg/faq-btn-close.svg");
+}
+
 .accordion__button:disabled {
-  opacity: 0.3;
-  pointer-events: none;
-}
-
-.accordion__icon-minus {
-  position: absolute;
-  top: 9px;
-  left: 9px;
-  color: #ffffff;
-}
-
-.accordion__icon-plus {
-  position: absolute;
-  top: 9px;
-  left: 9px;
-  display: block;
-  color: #102654;
-}
-
-.accordion__icon-plus.focus-visible:focus {
-  color: #ffffff;
+  background-image: url("../img/svg/faq-btn-disabled.svg");
 }
 
 .accordion__answer {
@@ -1871,7 +1853,7 @@ button,
 .card__price-bg {
   position: absolute;
   bottom: 30px;
-  left: 0;
+  left: -2px;
   display: block;
   font-size: 100px;
   line-height: 150px;
@@ -1882,12 +1864,16 @@ button,
 .card__link {
   padding: 25px 42px;
   width: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .coach {
   position: relative;
-  width: 260px;
-  height: 294px;
+  width: 100%;
+  height: 100%;
   color: #ffffff;
 }
 
@@ -1896,6 +1882,14 @@ button,
 }
 
 .coach:hover .coach__name {
+  display: none;
+}
+
+.coach:focus[tabindex="0"] .coach__info {
+  display: block;
+}
+
+.coach:focus[tabindex="0"] .coach__name {
   display: none;
 }
 
@@ -2059,6 +2053,10 @@ button,
 .contact__link {
   font-size: 14px;
   line-height: 21px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .contacts {
@@ -2206,6 +2204,7 @@ button,
 }
 
 .form__control-block {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2268,6 +2267,11 @@ button,
 }
 
 .form__button.focus-visible:focus {
+  background-color: #ffffff;
+  color: #103aae;
+}
+
+.form__button.focus-visible:active {
   background-color: #ffffff;
   color: #102654;
 }
@@ -2396,6 +2400,10 @@ button,
   background-color: inherit;
   border: 4px solid #ffffff;
   color: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .games__button.focus-visible:focus {
@@ -2508,6 +2516,10 @@ button,
   text-transform: uppercase;
   text-align: center;
   border: 4px solid #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .hero__link.focus-visible:focus {
@@ -2583,6 +2595,10 @@ button,
   line-height: 19px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .hit-sales__link::after {
@@ -2600,6 +2616,10 @@ button,
   outline: 1px solid #ffffff;
 }
 
+.hit-sales__link.focus-visible:active {
+  color: #ffffff;
+}
+
 .hit-sales__link[aria-disabled=true] {
   opacity: 0.3;
   pointer-events: none;
@@ -2611,6 +2631,8 @@ button,
 }
 
 .input-message.is-invalid {
+  position: absolute;
+  top: 34px;
   color: #ff121f;
 }
 
@@ -2701,6 +2723,10 @@ button,
   line-height: 9px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .other-sales__link::after {
@@ -2717,6 +2743,10 @@ button,
   padding: 10px;
   color: #102654;
   outline: 1px solid #102654;
+}
+
+.other-sales__link.focus-visible:active {
+  color: #102654;
 }
 
 .other-sales__link[aria-disabled=true] {
@@ -2805,6 +2835,11 @@ button,
   bottom: 0;
   height: 2px;
   background-color: #d10a42;
+}
+
+.period-list__link:active {
+  padding-bottom: 14px;
+  border-bottom: 2px solid #ed0233;
 }
 
 .period-list__link[aria-disabled=true] {
@@ -2914,14 +2949,18 @@ button,
   font-size: 14px;
   line-height: 14px;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .site-list__link::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 10px;
+  right: 10px;
   display: none;
   height: 1px;
   background-color: #ffffff;
@@ -3093,6 +3132,10 @@ button,
   line-height: 18px;
   text-align: center;
   border: 1px solid rgba(16, 38, 84, 0.2);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .tabs__link.is-active {
@@ -3105,6 +3148,10 @@ button,
 .tabs__link.focus-visible:focus {
   border: 1px solid #102654;
   outline: none;
+}
+
+.tabs__link:active {
+  border: 1px solid #ed0233;
 }
 
 .tabs__link[aria-disabled=true] {
@@ -3251,12 +3298,12 @@ button,
   }
 
   .advantages {
-    padding: 91px calc(50% - 339px);
+    padding: 91px 45px;
   }
 
   .advantages__wrapper {
-    -ms-grid-columns: 300px 314px;
-    grid-template-columns: 300px 314px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 41px 55px;
   }
 
@@ -3274,7 +3321,11 @@ button,
   }
 
   .coach {
-    width: 268px;
+    width: 100%;
+  }
+
+  .coach img {
+    width: 100%;
   }
 
   .coach__name {
@@ -3304,7 +3355,7 @@ button,
   }
 
   .coaches {
-    padding: 50px calc(50% - 283px) 100px;
+    padding: 50px 101px 100px;
   }
 
   .coaches__title {
@@ -3314,7 +3365,7 @@ button,
   }
 
   .contact {
-    padding: 60px calc(50% - 251px) 64px;
+    padding: 60px 133px 64px;
     border: 0;
   }
 
@@ -3356,7 +3407,7 @@ button,
   }
 
   .faq {
-    padding: 100px calc(50% - 339px);
+    padding: 100px 45px;
   }
 
   .faq__title {
@@ -3382,7 +3433,7 @@ button,
   }
 
   .free-lesson {
-    padding: 45px calc(50% - 252px) 68px;
+    padding: 45px 133px 68px;
   }
 
   .free-lesson__title {
@@ -3392,7 +3443,7 @@ button,
   }
 
   .games {
-    padding: 100px calc(50% - 339px) 50px;
+    padding: 100px 45px 50px;
   }
 
   .games__event-block {
@@ -3456,8 +3507,8 @@ button,
   }
 
   .games__game-picture {
-    width: 386px;
-    height: 282px;
+    width: 100%;
+    height: auto;
   }
 
   .gym {
@@ -3542,14 +3593,22 @@ button,
   }
 
   .hit-sales img {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
     width: 100%;
     height: auto;
-    -o-object-fit: cover;
-    object-fit: cover;
   }
 
   .hit-sales__info {
-    width: 279px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    width: 100%;
   }
 
   .main-page--error {
@@ -3584,13 +3643,14 @@ button,
   }
 
   .page-footer {
-    padding: 45px calc(50% - 339px) 44px;
+    padding: 45px 45px 44px;
   }
 
   .page-footer__link {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
+    margin-right: 55px;
     width: 80px;
     height: 19px;
   }
@@ -3629,7 +3689,7 @@ button,
   }
 
   .reviews {
-    padding: 91px calc(50% - 283px) 100px;
+    padding: 91px 101px 100px;
   }
 
   .reviews__title {
@@ -3638,11 +3698,12 @@ button,
 
   .site-list {
     gap: 10px;
-    margin-left: 55px;
+    margin-left: auto;
+    margin-right: 26px;
   }
 
   .social-list {
-    margin-left: 26px;
+    margin-left: auto;
   }
 
   .sales {
@@ -3690,20 +3751,18 @@ button,
   }
 
   .tabs {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
     margin-right: 0;
     margin-bottom: 29px;
     width: 100%;
   }
 
   .tabs__link {
-    width: 162px;
+    width: 100%;
   }
 
   .video__control {
@@ -3744,21 +3803,7 @@ button,
     padding: 10px;
     width: 32px;
     height: 32px;
-  }
-
-  .accordion__icon-minus {
-    top: 9px;
-    left: 9px;
-    width: 12px;
-    height: 12px;
-  }
-
-  .accordion__icon-plus {
-    top: 9px;
-    left: 9px;
-    width: 12px;
-    height: 12px;
-    color: #102654;
+    background-size: 32px 32px;
   }
 
   .accordion__answer {
@@ -3876,7 +3921,7 @@ button,
 
   .card__price::after {
     top: 76px;
-    right: 38px;
+    left: 146px;
     width: 24px;
     height: 33px;
     background-size: 24px 33px;
@@ -3890,15 +3935,17 @@ button,
   }
 
   .coach {
-    height: 274px;
+    width: 100%;
   }
 
   .coach img {
-    height: 274px;
+    width: 100%;
   }
 
   .coach__info {
     padding: 41px 33px 30px 40px;
+    width: 100%;
+    height: 100%;
   }
 
   .coach__title {
@@ -3918,7 +3965,7 @@ button,
   }
 
   .coaches {
-    padding: 40px calc(50% - 113px) 70px;
+    padding: 40px 47px 70px;
   }
 
   .coaches__title {
@@ -3984,8 +4031,8 @@ button,
   }
 
   .form__block {
-    -ms-grid-columns: 290px;
-    grid-template-columns: 290px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     gap: 28px;
     margin-bottom: 36px;
   }
@@ -4050,6 +4097,7 @@ button,
   .gym__video {
     margin: 0;
     width: 100%;
+    min-height: auto;
     background-image: url("../img/poster-mobile.jpg");
   }
 
@@ -4074,7 +4122,7 @@ button,
   .hero__title {
     margin-bottom: 23px;
     padding: 0;
-    min-height: 137px;
+    width: 290px;
     font-size: 72px;
     letter-spacing: 3.6px;
   }
@@ -4149,6 +4197,10 @@ button,
     padding: 0 12px;
   }
 
+  .other-sales__description br {
+    display: none;
+  }
+
   .other-sales__link {
     margin: 0 auto;
   }
@@ -4192,8 +4244,9 @@ button,
   }
 
   .price-list {
-    -ms-grid-columns: 290px;
-    grid-template-columns: 290px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
     gap: 35px;
   }
 
@@ -4238,12 +4291,12 @@ button,
   }
 
   .reviews__button-prev {
-    top: 152px;
+    top: 45%;
     left: -43px;
   }
 
   .reviews__button-next {
-    top: 152px;
+    top: 45%;
     right: -43px;
   }
 
@@ -4329,7 +4382,7 @@ button,
   }
 
   .subscription {
-    padding: 70px calc(50% - 145px);
+    padding: 70px 15px;
   }
 
   .subscription::after {
@@ -4348,6 +4401,7 @@ button,
 
   .subtitle--hero {
     padding: 46px 4px 7px;
+    width: 290px;
     font-size: 30px;
     line-height: 46px;
     letter-spacing: 0.86px;
@@ -4430,15 +4484,6 @@ button,
 }
 
 @media (hover: hover) {
-  .accordion__button:hover:not(.focus-visible) {
-    background-color: #102654;
-    cursor: pointer;
-  }
-
-  .accordion__icon-plus:hover:not(.focus-visible) {
-    color: #ffffff;
-  }
-
   .btn--prev:hover:not(.focus-visible) {
     border: 1px solid #102654;
   }
@@ -4469,7 +4514,7 @@ button,
 
   .form__button:hover:not(.focus-visible) {
     background-color: #ffffff;
-    color: #102654;
+    color: #103aae;
   }
 
   .games__button:hover:not(.focus-visible) {
