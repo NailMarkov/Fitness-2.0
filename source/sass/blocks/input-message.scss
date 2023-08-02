@@ -3,6 +3,8 @@
   line-height: 22px;
 
   &.is-invalid {
+    position: absolute;
+    top: 34px;
     color: #ff121f;
   }
 }

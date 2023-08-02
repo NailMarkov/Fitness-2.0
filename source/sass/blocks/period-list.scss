@@ -84,6 +84,11 @@
     }
   }
 
+  &:active {
+    padding-bottom: 14px;
+    border-bottom: 2px solid $color-torch-red-second;
+  }
+
   &[aria-disabled="true"] {
     opacity: 0.3;
   }

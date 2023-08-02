@@ -4,7 +4,7 @@
   color: $color-default-white;
 
   @include vp-1199 {
-    padding: 45px calc(50% - 252px) 68px;
+    padding: 45px 133px 68px;
   }
 
   @include vp-767 {

@@ -96,7 +96,7 @@
 
     @include vp-767 {
       top: 76px;
-      right: 38px;
+      left: 146px;
       width: 24px;
       height: 33px;
       background-size: 24px 33px;
@@ -107,7 +107,7 @@
 .card__price-bg {
   position: absolute;
   bottom: 30px;
-  left: 0;
+  left: -2px;
   display: block;
   font-size: 100px;
   line-height: 150px;
@@ -125,4 +125,5 @@
 .card__link {
   padding: 25px 42px;
   width: 100%;
+  user-select: none;
 }

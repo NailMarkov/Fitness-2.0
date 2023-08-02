@@ -1,15 +1,15 @@
 .coach {
   position: relative;
-  width: 260px;
-  height: 294px;
+  width:100%;
+  height: 100%;
   color: $color-default-white;
 
   @include vp-1199 {
-    width: 268px;
+    width: 100%;
   }
 
   @include vp-767 {
-    height: 274px;
+    width: 100%;
   }
 
   &:hover .coach__info {
@@ -19,13 +19,27 @@
   &:hover .coach__name {
     display: none;
   }
+
+  &:focus[tabindex="0"] {
+    .coach__info {
+      display: block;
+    }
+
+    .coach__name {
+      display: none;
+    }
+  }
 }
 
 .coach img {
   object-fit: cover;
 
+  @include vp-1199 {
+    width: 100%;
+  }
+
   @include vp-767 {
-    height: 274px;
+    width: 100%;
   }
 }
 
@@ -60,6 +74,8 @@
 
   @include vp-767 {
     padding: 41px 33px 30px 40px;
+    width: 100%;
+    height: 100%;
   }
 }
 

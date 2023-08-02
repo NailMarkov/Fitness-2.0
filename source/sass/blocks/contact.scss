@@ -3,7 +3,7 @@
   border-top: 1px solid #74819c;
 
   @include vp-1199 {
-    padding: 60px calc(50% - 251px) 64px;
+    padding: 60px 133px 64px;
     border: 0;
   }
 
@@ -110,6 +110,7 @@
 .contact__link {
   font-size: 14px;
   line-height: 21px;
+  user-select: none;
 
   @include vp-1199 {
     font-size: 18px;

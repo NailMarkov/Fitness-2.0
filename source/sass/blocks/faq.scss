@@ -3,7 +3,7 @@
   background-color: $color-ghost-white;
 
   @include vp-1199 {
-    padding: 100px $p-tablet;
+    padding: 100px 45px;
   }
 
   @include vp-767 {
