@@ -1873,7 +1873,7 @@ button,
 .coach {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   color: #ffffff;
 }
 
@@ -1963,6 +1963,7 @@ button,
 
 .coaches {
   padding: 6px calc(50% - 580px) 105px;
+  overflow-x: hidden;
 }
 
 .coaches__title {
@@ -3081,6 +3082,11 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 100%;
+}
+
+.subscription__content {
+  width: 100%;
 }
 
 .subtitle {
@@ -3173,10 +3179,9 @@ button,
 }
 
 .video__control {
-  position: relative;
+  position: absolute;
   top: 28%;
   left: 36%;
-  margin: 0;
   padding: 0;
   width: 100px;
   height: 100px;
@@ -3322,10 +3327,12 @@ button,
 
   .coach {
     width: 100%;
+    min-height: 294px;
   }
 
   .coach img {
     width: 100%;
+    height: auto;
   }
 
   .coach__name {
@@ -3362,6 +3369,16 @@ button,
     margin-bottom: 30px;
     margin-left: 0;
     text-align: center;
+  }
+
+  .coaches__button-prev {
+    top: 41%;
+    left: -76px;
+  }
+
+  .coaches__button-next {
+    top: 41%;
+    right: -76px;
   }
 
   .contact {
@@ -3509,6 +3526,10 @@ button,
   .games__game-picture {
     width: 100%;
     height: auto;
+  }
+
+  .games__game-picture img {
+    width: 100%;
   }
 
   .gym {
@@ -3677,10 +3698,11 @@ button,
   }
 
   .price-list {
-    -ms-grid-columns: 442px;
-    grid-template-columns: 442px;
-    -ms-grid-rows: (1fr)[3];
-    grid-template-rows: repeat(3, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 40px;
   }
 
@@ -3719,7 +3741,7 @@ button,
   }
 
   .subscription {
-    padding: 100px calc(50% - 221px);
+    padding: 100px 45px;
   }
 
   .subscription::after {
@@ -3940,6 +3962,7 @@ button,
 
   .coach img {
     width: 100%;
+    min-height: 274px;
   }
 
   .coach__info {
@@ -3973,12 +3996,12 @@ button,
   }
 
   .coaches__button-prev {
-    top: 122px;
+    top: 48%;
     left: -43px;
   }
 
   .coaches__button-next {
-    top: 122px;
+    top: 48%;
     right: -43px;
   }
 
@@ -4034,7 +4057,7 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 28px;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
 
   .form__button {
@@ -4096,9 +4119,11 @@ button,
 
   .gym__video {
     margin: 0;
+    padding-top: 41.2408759124%;
     width: 100%;
-    min-height: auto;
     background-image: url("../img/poster-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   .hero {
@@ -4244,6 +4269,8 @@ button,
   }
 
   .price-list {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     width: 100%;
@@ -4431,8 +4458,18 @@ button,
     line-height: 14px;
   }
 
+  .video.is-active .video__player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .video__control {
-    left: 39%;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 
