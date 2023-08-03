@@ -2057,12 +2057,13 @@ button,
 .coach {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   color: #ffffff;
 }
 @media (max-width: 1199px) {
   .coach {
     width: 100%;
+    min-height: 294px;
   }
 }
 @media (max-width: 767px) {
@@ -2090,11 +2091,13 @@ button,
 @media (max-width: 1199px) {
   .coach img {
     width: 100%;
+    height: auto;
   }
 }
 @media (max-width: 767px) {
   .coach img {
     width: 100%;
+    min-height: 274px;
   }
 }
 
@@ -2221,6 +2224,7 @@ button,
 
 .coaches {
   padding: 6px calc(50% - 580px) 105px;
+  overflow-x: hidden;
 }
 @media (max-width: 1199px) {
   .coaches {
@@ -2258,9 +2262,15 @@ button,
   top: 119px;
   left: -76px;
 }
+@media (max-width: 1199px) {
+  .coaches__button-prev {
+    top: 41%;
+    left: -76px;
+  }
+}
 @media (max-width: 767px) {
   .coaches__button-prev {
-    top: 122px;
+    top: 48%;
     left: -43px;
   }
 }
@@ -2270,9 +2280,15 @@ button,
   top: 119px;
   right: -76px;
 }
+@media (max-width: 1199px) {
+  .coaches__button-next {
+    top: 41%;
+    right: -76px;
+  }
+}
 @media (max-width: 767px) {
   .coaches__button-next {
-    top: 122px;
+    top: 48%;
     right: -43px;
   }
 }
@@ -2653,7 +2669,7 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 28px;
-    margin-bottom: 36px;
+    margin-bottom: 40px;
   }
 }
 
@@ -3016,6 +3032,12 @@ button,
   }
 }
 
+@media (max-width: 1199px) {
+  .games__game-picture img {
+    width: 100%;
+  }
+}
+
 .gym {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3132,9 +3154,11 @@ button,
 @media (max-width: 767px) {
   .gym__video {
     margin: 0;
+    padding-top: 41.2408759124%;
     width: 100%;
-    min-height: auto;
     background-image: url("../img/poster-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
 
@@ -3838,15 +3862,18 @@ button,
 }
 @media (max-width: 1199px) {
   .price-list {
-    -ms-grid-columns: 442px;
-    grid-template-columns: 442px;
-    -ms-grid-rows: (1fr)[3];
-    grid-template-rows: repeat(3, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 40px;
   }
 }
 @media (max-width: 767px) {
   .price-list {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     width: 100%;
@@ -4238,7 +4265,7 @@ button,
 }
 @media (max-width: 1199px) {
   .subscription {
-    padding: 100px calc(50% - 221px);
+    padding: 100px 45px;
   }
 }
 @media (max-width: 767px) {
@@ -4290,6 +4317,11 @@ button,
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
+}
+
+.subscription__content {
+  width: 100%;
 }
 
 .subtitle {
@@ -4452,15 +4484,21 @@ button,
 .video.is-active .video__player {
   display: block;
 }
+@media (max-width: 767px) {
+  .video.is-active .video__player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 .video.is-active .video__control {
   display: none;
 }
 
 .video__control {
-  position: relative;
+  position: absolute;
   top: 28%;
   left: 36%;
-  margin: 0;
   padding: 0;
   width: 100px;
   height: 100px;
@@ -4482,7 +4520,11 @@ button,
 }
 @media (max-width: 767px) {
   .video__control {
-    left: 39%;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
   }
 }
 .video__control:hover, .video__control:focus {

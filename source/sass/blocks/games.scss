@@ -206,3 +206,9 @@
     height: auto;
   }
 }
+
+.games__game-picture img {
+  @include vp-1199 {
+    width: 100%;
+  }
+}

@@ -1,5 +1,6 @@
 .coaches {
   padding: 6px $p-desktop 105px;
+  overflow-x: hidden;
 
   @include vp-1199 {
     padding: 50px 101px 100px;
@@ -33,8 +34,13 @@
   top: 119px;
   left: -76px;
 
+  @include vp-1199 {
+    top: 41%;
+    left: -76px;
+  }
+
   @include vp-767 {
-    top: 122px;
+    top: 48%;
     left: -43px;
   }
 }
@@ -44,8 +50,13 @@
   top: 119px;
   right: -76px;
 
+  @include vp-1199 {
+    top: 41%;
+    right: -76px;
+  }
+
   @include vp-767 {
-    top: 122px;
+    top: 48%;
     right: -43px;
   }
 }

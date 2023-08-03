@@ -97,8 +97,10 @@
 
   @include vp-767 {
     margin: 0;
+    padding-top: calc(50%*(226/274));
     width: 100%;
-    min-height: auto;
     background-image: url("../img/poster-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
