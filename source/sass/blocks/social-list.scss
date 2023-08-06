@@ -1,7 +1,7 @@
 .social-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 0 247px;
+  margin: 0 0 0 auto;
   padding: 0;
   color: #030a1a;
   list-style-type: none;
@@ -29,6 +29,7 @@
 
   &--ok {
     padding: 6px 6px 6px 5px;
+
   }
 
   &--reddit {
@@ -49,6 +50,8 @@
   &:active {
     background-color: $color-sapphire;
     color: $color-default-white;
+    -webkit-baground-image: $color-sapphire;
+    -webkit-text-fill-color: $color-default-white;
   }
 
   &[aria-disabled="true"] {

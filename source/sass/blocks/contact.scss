@@ -2,6 +2,10 @@
   padding: 57px calc(100% - 524px) 60px 120px;
   border-top: 1px solid #74819c;
 
+  @include vp-1365 {
+    padding: 57px 103px 60px calc(50% - 237px);
+  }
+
   @include vp-1199 {
     padding: 60px 133px 64px;
     border: 0;

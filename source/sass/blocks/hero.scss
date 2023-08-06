@@ -33,12 +33,14 @@
   text-align: right;
 
   @include vp-1199 {
+    margin-left: auto;
     padding: 186px 0 50px;
     width: 113px;
   }
 
   @include vp-767 {
     position: absolute;
+    left: calc(50% - 145px);
     margin: 0;
     padding-top: 176px;
   }
@@ -82,10 +84,11 @@
 
   @include vp-767 {
     margin-bottom: 23px;
-    padding: 0;
-    width: 290px;
+    padding: 0 calc(50% - 145px);
+    min-height: 137px;
     font-size: 72px;
     letter-spacing: 3.6px;
+    text-align: right;
   }
 }
 
@@ -130,6 +133,7 @@
   &:active {
     background-color: $color-default-white;
     color: $color-sapphire;
+    -webkit-text-fill-color: $color-sapphire;
   }
 
   &[aria-disabled="true"] {
@@ -139,7 +143,13 @@
 }
 
 .hero__image {
+
+  img {
+    background-color: $color-sapphire;
+  }
+
   @include vp-1199 {
+    margin-right: auto;
     width: 324px;
     height: 390px;
   }

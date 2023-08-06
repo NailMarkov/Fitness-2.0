@@ -1,6 +1,6 @@
 .form__block {
   display: grid;
-  grid-template-columns: repeat(2, 190px);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin: 0 0 28px;
   padding: 0;
@@ -47,11 +47,19 @@
     @include active {
       outline: none;
       border: 1px solid $color-default-white;
+
+      &::placeholder {
+        color: transparent;
+      }
     }
 
     @include focus {
       outline: none;
       border: 1px solid $color-default-white;
+
+      &::placeholder {
+        color: transparent;
+      }
     }
   }
 }
@@ -64,6 +72,8 @@
   color: $color-default-white;
   letter-spacing: 0.7px;
   border: 3px solid $color-default-white;
+  user-select: none;
+  -webkit-user-select: none;
 
   @include vp-1199 {
     width: 474px;
@@ -83,9 +93,10 @@
     color: $color-egyptian-blue;
   }
 
-  @include active {
+  &:active {
     background-color: $color-default-white;
     color: $color-sapphire;
+    -webkit-text-fill-color: $color-sapphire;
   }
 
   &:disabled {

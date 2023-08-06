@@ -2,6 +2,10 @@
   padding: 6px $p-desktop 105px;
   overflow-x: hidden;
 
+  @include vp-1365 {
+    padding: 6px 103px 105px;
+  }
+
   @include vp-1199 {
     padding: 50px 101px 100px;
   }
@@ -40,7 +44,7 @@
   }
 
   @include vp-767 {
-    top: 48%;
+    top: 44%;
     left: -43px;
   }
 }
@@ -56,7 +60,7 @@
   }
 
   @include vp-767 {
-    top: 48%;
+    top: 44%;
     right: -43px;
   }
 }

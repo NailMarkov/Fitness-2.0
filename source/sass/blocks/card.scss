@@ -11,7 +11,7 @@
   }
 
   @include hover {
-    padding: 62px 70px 61px;
+    padding: 62px 69px 61px;
     border: 7px solid transparent;
     border-image: $red-to-blue;
     border-image-slice: 1;
@@ -25,11 +25,42 @@
     }
 
     @include vp-1199 {
-      padding: 62px 111px 61px;
+      padding: 62px 112px 61px;
     }
 
     @include vp-767 {
-      padding: 43px 35px 47px;
+      padding: 44px 34px 47px;
+    }
+
+    .card__price {
+      @include vp-767 {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  &:focus[tabindex="0"] {
+    padding: 62px 69px 61px;
+    border: 7px solid transparent;
+    border-image: $red-to-blue;
+    border-image-slice: 1;
+    outline: none;
+
+    .card__link {
+      padding: 27px 42px 26px 43px;
+      width: 100%;
+      color: $color-default-white;
+      background-image: $red-to-blue;
+      border: none;
+      outline: none;
+    }
+
+    @include vp-1199 {
+      padding: 62px 112px 61px;
+    }
+
+    @include vp-767 {
+      padding: 44px 34px 47px;
     }
 
     .card__price {
@@ -65,15 +96,22 @@
 .card__price {
   position: relative;
   margin: 0;
-  padding: 36px 50px 4px 21px;
+  padding: 36px 50px 4px 20px;
+  width: 205px;
   font-weight: 700;
   font-size: 60px;
   line-height: 150px;
   color: $color-egyptian-blue;
   z-index: 1;
 
+  @include vp-1199 {
+    width: 204px;
+  }
+
   @include vp-767 {
-    padding: 56px 50px 29px 38px;
+    margin: 0 auto;
+    padding: 56px 38px 29px;
+    width: 208px;
     font-size: 48px;
     line-height: 72px;
   }
@@ -82,7 +120,7 @@
     content: "";
     position: absolute;
     top: 90px;
-    right: 21px;
+    right: 18px;
     width: 30px;
     height: 42px;
     background-image: url("../img/svg/rubles.svg");
@@ -126,4 +164,11 @@
   padding: 25px 42px;
   width: 100%;
   user-select: none;
+
+  @include focus {
+    color: $color-default-white;
+    background-image: $red-to-blue;
+    border: none;
+    outline: none;
+  }
 }
