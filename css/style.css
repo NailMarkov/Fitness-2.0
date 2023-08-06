@@ -1810,6 +1810,24 @@ button,
   background-color: #ffffff;
 }
 
+.card:focus[tabindex="0"] {
+  padding: 62px 69px 61px;
+  border: 7px solid transparent;
+  -o-border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border-image-slice: 1;
+  outline: none;
+}
+
+.card:focus[tabindex="0"] .card__link {
+  padding: 27px 42px 26px 43px;
+  width: 100%;
+  color: #ffffff;
+  background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border: none;
+  outline: none;
+}
+
 .card__title {
   margin: 0 0 16px;
   font-weight: 700;
@@ -1829,7 +1847,8 @@ button,
 .card__price {
   position: relative;
   margin: 0;
-  padding: 36px 50px 4px 21px;
+  padding: 36px 50px 4px 20px;
+  width: 205px;
   font-weight: 700;
   font-size: 60px;
   line-height: 150px;
@@ -1841,7 +1860,7 @@ button,
   content: "";
   position: absolute;
   top: 90px;
-  right: 21px;
+  right: 18px;
   width: 30px;
   height: 42px;
   background-image: url("../img/svg/rubles.svg");
@@ -1868,6 +1887,13 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.card__link.focus-visible:focus {
+  color: #ffffff;
+  background-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
+  border: none;
+  outline: none;
 }
 
 .coach {
@@ -2196,8 +2222,8 @@ button,
 .form__block {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (190px)[2];
-  grid-template-columns: repeat(2, 190px);
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin: 0 0 28px;
   padding: 0;
@@ -2252,9 +2278,49 @@ button,
   border: 1px solid #ffffff;
 }
 
+.form__control-block input.focus-visible:active::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:active::-moz-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:active:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:active::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:active::placeholder {
+  color: transparent;
+}
+
 .form__control-block input.focus-visible:focus {
   outline: none;
   border: 1px solid #ffffff;
+}
+
+.form__control-block input.focus-visible:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__control-block input.focus-visible:focus::placeholder {
+  color: transparent;
 }
 
 .form__button {
@@ -2265,6 +2331,10 @@ button,
   color: #ffffff;
   letter-spacing: 0.7px;
   border: 3px solid #ffffff;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .form__button.focus-visible:focus {
@@ -2272,9 +2342,10 @@ button,
   color: #103aae;
 }
 
-.form__button.focus-visible:active {
+.form__button:active {
   background-color: #ffffff;
   color: #102654;
+  -webkit-text-fill-color: #102654;
 }
 
 .form__button:disabled {
@@ -2416,6 +2487,7 @@ button,
 .games__button:active {
   background-color: #ffffff;
   color: #102654;
+  -webkit-text-fill-color: #102654;
 }
 
 .games__button[aria-disabled=true] {
@@ -2424,11 +2496,17 @@ button,
 }
 
 .games__game-picture {
-  height: 292px;
+  min-height: 292px;
+}
+
+.games__game-picture img {
+  height: 100%;
   background-color: #003d85;
+  color: #ffffff;
 }
 
 .gym {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2459,9 +2537,9 @@ button,
 }
 
 .gym__video {
-  position: relative;
-  margin-left: 437px;
-  margin-top: -113px;
+  position: absolute;
+  top: 408px;
+  left: 558px;
   width: 364px;
   height: 228px;
   background-image: url("../img/poster-desktop.jpg");
@@ -2532,11 +2610,16 @@ button,
 .hero__link:active {
   background-color: #ffffff;
   color: #102654;
+  -webkit-text-fill-color: #102654;
 }
 
 .hero__link[aria-disabled=true] {
   opacity: 0.4;
   pointer-events: none;
+}
+
+.hero__image img {
+  background-color: #102654;
 }
 
 .hit-sales {
@@ -2762,6 +2845,9 @@ button,
   -webkit-box-align: top;
   -ms-flex-align: top;
   align-items: top;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
   padding: 41px calc(50% - 580px) 32px;
   background-color: #030a1a;
   color: #ffffff;
@@ -2771,6 +2857,7 @@ button,
   display: block;
   -ms-flex-item-align: end;
   align-self: flex-end;
+  margin-right: auto;
 }
 
 .page-header {
@@ -2794,8 +2881,8 @@ button,
 .period-list::after {
   content: "";
   position: absolute;
-  left: 409px;
-  right: 409px;
+  left: 0;
+  right: 0;
   bottom: 0;
   height: 2px;
   background-color: rgba(120, 120, 120, 0.2);
@@ -2939,7 +3026,7 @@ button,
   grid-template-columns: repeat(5, auto);
   gap: 20px;
   padding: 0;
-  margin: 0 0 0 268px;
+  margin: 0 0 0 18px;
   list-style-type: none;
 }
 
@@ -2984,7 +3071,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: 0 0 0 247px;
+  margin: 0 0 0 auto;
   padding: 0;
   color: #030a1a;
   list-style-type: none;
@@ -3020,6 +3107,8 @@ button,
 .social-list__link:active {
   background-color: #102654;
   color: #ffffff;
+  -webkit-baground-image: #102654;
+  -webkit-text-fill-color: #ffffff;
 }
 
 .social-list__link[aria-disabled=true] {
@@ -3249,6 +3338,24 @@ button,
   }
 */
 
+@media (max-width: 1365px) {
+  .coaches {
+    padding: 6px 103px 105px;
+  }
+
+  .contact {
+    padding: 57px 103px 60px calc(50% - 237px);
+  }
+
+  .free-lesson {
+    padding: 55px calc(50% - 212px) 63px 103px;
+  }
+
+  .page-footer {
+    padding: 41px 103px 32px;
+  }
+}
+
 @media (max-width: 1199px) {
   .accordion__item {
     padding: 24px 0 25px;
@@ -3321,18 +3428,21 @@ button,
     padding: 69px 117px 67px;
   }
 
+  .card:focus[tabindex="0"] {
+    padding: 62px 112px 61px;
+  }
+
+  .card__price {
+    width: 204px;
+  }
+
   .card__price::after {
     right: 20px;
   }
 
-  .coach {
-    width: 100%;
-    min-height: 294px;
-  }
-
   .coach img {
     width: 100%;
-    height: auto;
+    min-height: 294px;
   }
 
   .coach__name {
@@ -3544,7 +3654,7 @@ button,
     margin-right: 0;
     padding-top: 58px;
     padding-bottom: 36px;
-    width: 678px;
+    width: 100%;
   }
 
   .gym__text {
@@ -3564,9 +3674,14 @@ button,
     width: 100%;
   }
 
+  .gym__image img {
+    margin: 0 auto;
+  }
+
   .gym__video {
-    margin-left: 206px;
-    margin-top: -84px;
+    top: 671px;
+    left: 251px;
+    margin: -84px auto 0;
     width: 266px;
     height: 167px;
     background-image: url("../img/poster-tablet.jpg");
@@ -3580,6 +3695,7 @@ button,
   }
 
   .hero__text {
+    margin-left: auto;
     padding: 186px 0 50px;
     width: 113px;
   }
@@ -3605,6 +3721,7 @@ button,
   }
 
   .hero__image {
+    margin-right: auto;
     width: 324px;
     height: 390px;
   }
@@ -3703,6 +3820,9 @@ button,
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     gap: 40px;
   }
 
@@ -3797,7 +3917,7 @@ button,
 
 @media (hover: hover) and (max-width: 1199px) {
   .card:hover:not(.focus-visible) {
-    padding: 62px 111px 61px;
+    padding: 62px 112px 61px;
   }
 }
 
@@ -3929,6 +4049,14 @@ button,
     padding: 51px 41px 54px;
   }
 
+  .card:focus[tabindex="0"] {
+    padding: 44px 34px 47px;
+  }
+
+  .card:focus[tabindex="0"] .card__price {
+    padding-bottom: 30px;
+  }
+
   .card__title {
     margin-bottom: 8px;
     font-size: 22px;
@@ -3936,7 +4064,9 @@ button,
   }
 
   .card__price {
-    padding: 56px 50px 29px 38px;
+    margin: 0 auto;
+    padding: 56px 38px 29px;
+    width: 208px;
     font-size: 48px;
     line-height: 72px;
   }
@@ -3954,10 +4084,6 @@ button,
     left: 23px;
     font-size: 80px;
     line-height: 120px;
-  }
-
-  .coach {
-    width: 100%;
   }
 
   .coach img {
@@ -3996,12 +4122,12 @@ button,
   }
 
   .coaches__button-prev {
-    top: 48%;
+    top: 44%;
     left: -43px;
   }
 
   .coaches__button-next {
-    top: 48%;
+    top: 44%;
     right: -43px;
   }
 
@@ -4135,6 +4261,7 @@ button,
 
   .hero__text {
     position: absolute;
+    left: calc(50% - 145px);
     margin: 0;
     padding-top: 176px;
   }
@@ -4146,10 +4273,11 @@ button,
 
   .hero__title {
     margin-bottom: 23px;
-    padding: 0;
-    width: 290px;
+    padding: 0 calc(50% - 145px);
+    min-height: 137px;
     font-size: 72px;
     letter-spacing: 3.6px;
+    text-align: right;
   }
 
   .hero__link {
@@ -4427,8 +4555,7 @@ button,
   }
 
   .subtitle--hero {
-    padding: 46px 4px 7px;
-    width: 290px;
+    padding: 46px calc(50% - 141px) 7px;
     font-size: 30px;
     line-height: 46px;
     letter-spacing: 0.86px;
@@ -4475,7 +4602,7 @@ button,
 
 @media (hover: hover) and (max-width: 767px) {
   .card:hover:not(.focus-visible) {
-    padding: 43px 35px 47px;
+    padding: 44px 34px 47px;
   }
 
   .card:hover:not(.focus-visible) .card__price {
@@ -4530,7 +4657,7 @@ button,
   }
 
   .card:hover:not(.focus-visible) {
-    padding: 62px 70px 61px;
+    padding: 62px 69px 61px;
     border: 7px solid transparent;
     -o-border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
     border-image: linear-gradient(151deg, #ed0233 0%, #003eb7 100%);
