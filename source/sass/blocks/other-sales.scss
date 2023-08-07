@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   padding: 28px 28px 33px;
+  min-height: 211px;
   color: #1c3374;
   border: 7px solid transparent;
   border-image: $red-to-blue;
@@ -21,6 +22,7 @@
 
 .other-sales__description {
   margin: 0;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 21px;
 

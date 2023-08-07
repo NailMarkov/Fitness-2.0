@@ -9,8 +9,11 @@
 
   @include vp-1199 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     gap: 40px;
   }
 

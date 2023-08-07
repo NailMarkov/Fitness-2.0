@@ -32,9 +32,6 @@
   position: relative;
   display: grid;
   grid-template-columns: 170px 110px;
-  grid-template-areas:
-    "address phone"
-    "chart email";
   gap: 14px 120px;
   margin-left: 3px;
 
@@ -46,11 +43,6 @@
 
   @include vp-767 {
     grid-template-columns: 290px;
-    grid-template-areas:
-      "address"
-      "chart"
-      "phone"
-      "email";
     gap: 21px;
   }
 
@@ -75,20 +67,10 @@
   }
 }
 
-.contact__block--address {
-  grid-area: address;
-}
-
-.contact__block--chart {
-  grid-area: chart;
-}
-
 .contact__block--phone {
-  grid-area: phone;
-}
-
-.contact__block--email {
-  grid-area: email;
+  @include vp-767 {
+    grid-row: 3 / 4;
+  }
 }
 
 .contact__subtitle {

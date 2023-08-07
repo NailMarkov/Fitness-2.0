@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  padding: 120px $p-desktop;
+  padding: 120px $p-desktop 235px;
 
   @include vp-1199 {
     flex-direction: column;
@@ -85,19 +85,17 @@
 }
 
 .gym__video {
-  // position: relative;
-  // margin-left: 437px;
-  // margin-top: -113px;
   position: absolute;
   top: 408px;
-  left: 558px;
+  left: 540px;
   width: 364px;
   height: 228px;
   background-image: url("../img/poster-desktop.jpg");
 
   @include vp-1199 {
-    top: 671px;
-    left: 251px;
+    position: relative;
+    top: 0;
+    left: 0;
     margin: -84px auto 0;
     width: 266px;
     height: 167px;

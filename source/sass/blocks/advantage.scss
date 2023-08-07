@@ -1,14 +1,20 @@
 .advantage {
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: min-content 1fr;
   grid-template-areas:
     "num titl"
     "num des";
-  height: 71px;
+  min-height: 71px;
   gap: 5px 30px;
 
   @include vp-1199 {
     gap: 5px 29px;
+
+    &:first-child {
+      .advantage__description br {
+        display: none;
+      }
+    }
   }
 
   @include vp-767 {

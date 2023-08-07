@@ -1,5 +1,7 @@
 .page-header {
+  position: absolute;
   padding: 30px $p-desktop 25px;
+  width: 100%;
   z-index: 1;
 
   @include vp-1199 {
@@ -7,6 +9,6 @@
   }
 
   @include vp-767 {
-    padding: 20px 15px 15px;
+    padding: 17px 15px 15px;
   }
 }

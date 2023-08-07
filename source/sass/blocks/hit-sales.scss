@@ -13,6 +13,7 @@
 }
 
 .hit-sales img {
+  height: 100%;
   background-color: $color-dark-cerulean;
   color: $color-default-white;
 
@@ -69,6 +70,7 @@
 
 .hit-sales__description {
   margin: 0;
+  margin-bottom: 20px;
   font-size: 18px;
   line-height: 25px;
 

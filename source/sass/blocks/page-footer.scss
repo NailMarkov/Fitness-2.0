@@ -1,7 +1,7 @@
 .page-footer {
   display: flex;
   align-items: top;
-  align-items: flex-end;
+  align-items: center;
   padding: 41px calc(50% - 580px) 32px;
   background-color: $color-black-russian;
   color: $color-default-white;
@@ -23,7 +23,8 @@
 
 .page-footer__link {
   display: block;
-  align-self: flex-end;
+  align-self: center;
+  margin-top: 10px;
   margin-right: auto;
 
   @include vp-1199 {
