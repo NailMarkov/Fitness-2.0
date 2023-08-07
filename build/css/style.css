@@ -1794,7 +1794,7 @@ button,
   .advantages__wrapper {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    gap: 41px 55px;
+    gap: 41px 30px;
   }
 }
 @media (max-width: 767px) {
@@ -2277,7 +2277,7 @@ button,
 }
 @media (max-width: 1199px) {
   .coaches {
-    padding: 50px 101px 100px;
+    padding: 50px 101px 91px;
   }
 }
 @media (max-width: 767px) {
@@ -2629,7 +2629,7 @@ button,
 }
 @media (max-width: 767px) {
   .faq {
-    padding: 77px 15px 70px;
+    padding: 75px 15px 70px;
   }
 }
 
@@ -2684,7 +2684,7 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 28px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 }
 
@@ -3268,9 +3268,11 @@ button,
 }
 @media (max-width: 767px) {
   .hero__text {
-    position: absolute;
+    position: relative;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     left: calc(50% - 145px);
-    margin: 0;
+    margin: 0 0 63px;
     padding-top: 176px;
   }
 }
@@ -3288,6 +3290,8 @@ button,
 }
 @media (max-width: 767px) {
   .hero__block {
+    position: relative;
+    margin-left: -113px;
     margin-right: 0;
     width: 100%;
   }
@@ -3351,6 +3355,10 @@ button,
 }
 @media (max-width: 767px) {
   .hero__link {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    left: 0;
     margin-left: 0;
     padding-top: 22px;
     padding-bottom: 19px;
@@ -3776,7 +3784,7 @@ button,
 }
 @media (max-width: 1199px) {
   .page-footer {
-    padding: 45px 45px 44px;
+    padding: 42px 45px 44px;
   }
 }
 @media (max-width: 767px) {
@@ -3788,7 +3796,7 @@ button,
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    padding: 50px 15px;
+    padding: 41px 15px 50px;
   }
 }
 
@@ -3805,6 +3813,7 @@ button,
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin-top: 0px;
     margin-right: 55px;
     width: 80px;
     height: 19px;
@@ -3814,7 +3823,7 @@ button,
   .page-footer__link {
     -ms-flex-item-align: start;
         align-self: flex-start;
-    width: 68px;
+    width: 66px;
     height: 15px;
   }
 }
@@ -4074,7 +4083,7 @@ button,
 }
 @media (max-width: 767px) {
   .reviews {
-    padding: 70px 47px 70px;
+    padding: 69px 47px 70px;
   }
 }
 
@@ -4267,6 +4276,12 @@ button,
   margin-bottom: 10px;
   background-color: #ffffff;
   border-radius: 50%;
+}
+@media (max-width: 1199px) {
+  .social-list__link {
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
 }
 .social-list__link--vk {
   padding: 6px 6px 6px 5px;
