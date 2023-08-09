@@ -1,5 +1,7 @@
 .games {
-  display: flex;
+  // display: flex;
+  display: grid;
+  grid-template-columns: 3fr 4fr;
   padding: 120px $p-desktop 100px;
 
   @include vp-1199 {
@@ -7,7 +9,8 @@
   }
 
   @include vp-767 {
-    flex-direction: column;
+    // flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 70px 15px 30px;
   }
 }
@@ -207,10 +210,10 @@
   }
 
   img {
-    height: 100%;
     background-color: $color-dark-cerulean;
     color: $color-default-white;
     object-fit: cover;
+
 
     @include vp-1199 {
       width: 100%;
