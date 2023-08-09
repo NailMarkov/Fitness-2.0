@@ -9,6 +9,7 @@
 }
 
 .nav__link {
+  margin-left: 15px;
   font-family: $ff-alumni;
   font-weight: 600;
   font-size: 26px;
@@ -30,7 +31,8 @@
   }
 }
 
-.nav__link:first-child {
+.nav__link-logo {
+  flex-shrink: 0;
   margin-top: 10px;
   margin-right: auto;
 
@@ -47,5 +49,6 @@
 }
 
 .nav__wrapper {
-  margin-left: 30px;
+  margin-left: 15px;
+  text-align: right;
 }

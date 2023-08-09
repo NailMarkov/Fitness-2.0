@@ -210,6 +210,7 @@
     height: 100%;
     background-color: $color-dark-cerulean;
     color: $color-default-white;
+    object-fit: cover;
 
     @include vp-1199 {
       width: 100%;

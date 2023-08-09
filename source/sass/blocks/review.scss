@@ -2,8 +2,10 @@
   display: grid;
   grid-template-columns: 80px 1fr;
   grid-template-rows: repeat(2, auto);
+  align-content: flex-start;
   gap: 19px 28px;
   padding: 62px 62px 58px;
+  height: auto;
   background-color: #1c3374;
   color: $color-default-white;
   filter: drop-shadow(0 0 40px rgba(28, 51, 116, 0.2));

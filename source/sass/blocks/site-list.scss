@@ -13,40 +13,20 @@
   }
 
   @include vp-767 {
+    justify-items: flex-start;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-      ". link3"
-      "link1 link4"
-      "link2 link5";
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: column;
     gap: 16px 30px;
-    margin-top: -20px;
-    margin-left: 0;
-    margin-bottom: 34px;
+    margin: -20px 0 29px 0;
     width: 290px;
   }
 }
 
-.site-list__item {
+.site-list__item:first-child {
   @include vp-767 {
-    &--item1 {
-      grid-area: link1;
-    }
-
-    &--item2 {
-      grid-area: link2;
-    }
-
-    &--item3 {
-      grid-area: link3;
-    }
-
-    &--item4 {
-      grid-area: link4;
-    }
-
-    &--item5 {
-      grid-area: link5;
-    }
+    grid-row: span 2;
+    align-self: flex-end;
   }
 }
 
@@ -62,7 +42,6 @@
   @include vp-767 {
     padding-left: 0;
     font-size: 16px;
-    text-align: left;
   }
 
   &::after {
@@ -74,6 +53,10 @@
     display: none;
     height: 1px;
     background-color: $color-default-white;
+
+    @include vp-767 {
+      left: 0;
+    }
   }
 
   @include hover {

@@ -32,25 +32,25 @@
     gap: 37px;
   }
 
-  &::after,
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 340px;
-    height: 2px;
-    background-color: rgba(209, 10, 66, 0.2);
+  // &::after,
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 50%;
+  //   width: 340px;
+  //   height: 2px;
+  //   background-color: rgba(209, 10, 66, 0.2);
 
-    @include vp-1199 {
-      content: none;
-    }
-  }
+  //   @include vp-1199 {
+  //     content: none;
+  //   }
+  // }
 
-  &::after {
-    right: -18px;
-  }
+  // &::after {
+  //   right: -18px;
+  // }
 
-  &::before {
-    left: -18px;
-  }
+  // &::before {
+  //   left: -18px;
+  // }
 }
