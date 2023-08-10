@@ -2746,6 +2746,7 @@ button,
 }
 
 .nav__link {
+  display: block;
   margin-left: 15px;
   font-family: "Alumni Sans", "Arial", sans-serif;
   font-weight: 600;
@@ -2763,8 +2764,12 @@ button,
 }
 
 .nav__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-left: 15px;
-  text-align: right;
 }
 
 .other-sales {
