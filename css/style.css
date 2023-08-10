@@ -2485,6 +2485,7 @@ button,
 
 .games__game-picture {
   min-height: 292px;
+  background-color: #010148;
 }
 
 .games__game-picture img {
